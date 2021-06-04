@@ -1,0 +1,26 @@
+.search-container {
+    display:flex;
+    height: 20px;
+}
+
+.search-input {
+    position: relative;
+    height: 20px;
+    color: #FFFFFF;
+    outline: none;
+    background: none;
+}
+
+#stock-search {
+    color: #FFFFFF;
+    background: #5B5A99;
+    fill-opacity: 0.5;
+}
+
+.search{
+    border-color: #5B5A99;
+}
+
+.search-Icon {                                  
+    height: 37px;
+}

@@ -1,0 +1,15 @@
+.stock-details-container{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    color: #59588D;
+    margin-left: 10vw;
+}
+
+.stock-details {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    margin-left: 0vw;
+
+}

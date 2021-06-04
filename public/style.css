@@ -1,0 +1,52 @@
+.logo{
+
+    padding: 15%;
+    display: flex;
+    justify-content: center;
+}
+.texts-sidebar{
+    color: #6F6C99;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+.texts-sidebar a{
+   
+    color: #6F6C99;
+    margin-left: 40px;
+
+    
+}
+.down-text a{
+    margin-left: 70px;
+    color: #6F6C99;
+    padding: 0%;
+    
+}
+.side-btn{
+    background-color: #8683ac;
+    margin-left: 70px;
+    
+    color: white;
+    border-radius: 10%;
+}
+.nav{
+    font-size: 25px;
+    color: white;
+    padding: 3%;
+}
+.cards{
+    background-color: #1B1940;
+    border-color:  #4f4e61;
+    color: white;
+    border-radius: 20px;
+    padding: 2%;
+}
+.cards:hover{
+    background-color: #4cc0cf;
+    border-color:  #4f4e61;
+    color: white;
+    border-radius: 20px;
+    padding: 2%;
+}
+

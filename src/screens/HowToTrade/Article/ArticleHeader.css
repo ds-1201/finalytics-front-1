@@ -1,0 +1,39 @@
+.article-header-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 18vh;
+    width: 41vw;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    margin-left: 12vw;
+}
+
+.subtitle {
+    position: relative;
+    top: 4vh;
+    width: 20vw;
+    height: 10px;
+    margin-left: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 2.2vh;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.title {
+    width: 35vw;
+    height: 14vh;
+    margin-left: 2.6vw;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 4vh;
+    color: #FFFFFF;
+    text-align: center;
+}

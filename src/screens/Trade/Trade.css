@@ -1,0 +1,24 @@
+.trends-container {
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+.trends-graphs {
+  width: 60vw;
+  margin-right: 40vw;
+  display: grid;
+  grid-template-columns: 19vw 19vw 19vw 19vw;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0.125rem;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+  border-radius: 0.125rem;
+  height: 100px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.125rem;
+  background-color: gray;
+}

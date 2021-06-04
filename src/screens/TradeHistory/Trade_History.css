@@ -1,0 +1,215 @@
+#tradetable{
+    margin-top: 36vh;
+    margin-left: 7vw;
+    position:absolute;
+    width:68vw;
+    height:auto;
+    overflow: hidden;
+
+}
+#tradetablep{
+  margin-top: 10vh;
+  margin-left: 7vw;
+  position:absolute;
+  width:68vw;
+  height:auto;
+  overflow: hidden;
+
+}
+#row1{
+    padding:20vw;
+}
+#Even{
+    background-color: rgb(104, 104, 139);
+    color: black;
+}
+#od{
+    color: rgb(47, 175, 218);
+}
+
+#Odd{
+    background-color: #1B1940;
+}
+#tradetable2{
+    margin-top: 2vh;
+    background-color:  #1B1940;
+    height:34vh;
+    margin-left:7vw;
+    display: block;
+    width:68vw;
+    position: absolute;
+   
+}
+#tabhead{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: rgb(42, 202, 255);
+    padding-left: 15px;
+    
+}
+#filter{
+    padding-bottom: 0vh;
+    width:7vw;
+    margin-left: 10vw;
+    margin-top:2vh;
+}
+#datestyle{
+  font-size: 1.3em;
+  margin-left: 4vw;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+}
+#from{
+    font-size: 0.9em;
+    margin-left: 4vw;
+    float:left;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    margin-right:10vw;
+    color:white;
+}
+#to{
+    font-size: 0.9em;
+    margin-top:0vh;
+    margin-bottom: 0vh;
+    color:white;
+}
+input {
+  padding: 1.7vh 0vw;
+  text-align: center;
+  background-color: rgb(42, 202, 255);
+  color: #000;
+  font-size: 0.7rem;
+}
+
+#datefrom{
+  margin-left: 1vw;
+  margin-top:0vh;
+    float:left;
+    margin-right:3vw;
+}
+#dateto{
+    margin-left: 0vw;
+    margin-top:-1vh;
+    float:left;
+}
+#buy{
+  font-size: 1.3em;
+  color: rgb(42, 202, 255);
+  margin-left: 3vw;
+  float:left;
+  margin-top: 0vh;
+   margin-bottom: 0.5vh;
+}
+#sell{
+  font-size: 1.3em;
+  color: rgb(42, 202, 255);
+  margin-left: 27vw;
+  margin-top: 0vh;
+  margin-bottom: 0.5vh;
+}
+#from1{
+  font-size: 0.9em;
+  margin-left: 4vw;
+  float:left;
+  margin-top: 0vh;
+  margin-bottom: 0.5vh;
+  color:white;
+}
+#to1{
+  font-size: 0.9em;
+  margin-left: 9.5vw;
+  float:left;
+  margin-top:0vh;
+  margin-bottom: 0.5vh;
+  color:white;
+}
+#from2{
+  font-size: 0.9em;
+  margin-left: 10.5vw;
+  float:left;
+  margin-top: 0vh;
+  margin-right:9vw;
+  margin-bottom: 0.5vh;
+  color:white;
+}
+#to2{
+  font-size: 0.9em;
+  margin-right: 0vw;
+  margin-top:0vh;
+  margin-bottom: 0.5vh;
+  color:white;
+}
+#range1{
+  color:white;
+  background-color:rgb(42, 202, 255);
+  width:6vw;
+  height:0vh;
+  text-align: center;
+  float:left;
+}
+#r1{
+  float:left;
+  margin-left: 2vw;
+}
+#range2{
+  color:white;
+  background-color:rgb(42, 202, 255);
+  width:6vw;
+  height: 0vh;
+  text-align: center;
+  float:left;
+}
+#r2{
+  float:left;
+  margin-left: 4vw;
+}
+#range3{
+  color:white;
+  background-color:rgb(42, 202, 255);
+  width:6vw;
+  height: 0vh;
+  text-align: center;
+  float:left;
+}
+#r3{
+  float:left;
+  margin-left: 5vw;
+}
+#range4{
+  color:white;
+  background-color:rgb(42, 202, 255);
+  width:6vw;
+  height: 0vh;
+  text-align: center;
+}
+#r4{
+  margin-left: 3vw;
+  float:left;
+  margin-right: 0vw;
+}
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+.datePicker {
+  z-index: 9999 !important;
+}
+#p1{
+  margin-right: 2vw;
+  margin-left: 25vw;
+}
+#p2{
+  margin-right: 2vw;
+}
+#p3{
+  margin-right: 2vw;
+}
+#p4{
+  margin-right: 2vw;
+}
+#p5{
+  margin-right: 2vw;
+}
+#p6{
+  margin-right:30vw;
+}

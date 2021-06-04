@@ -1,0 +1,47 @@
+.card-container {
+    overflow: hidden;
+    width: 21vw;
+    height: 39vh;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    color: white;
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0vh 0vw 2vh 2vw;
+    }
+    
+    #cdimage {
+        height: 17vh;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 0px;
+       
+    }
+    
+    .card-content {
+        margin: 1rem;
+        margin-top: 0rem;
+    }
+    .card-title{
+        margin-top: -1rem;
+        margin-bottom: 0rem;
+        cursor: pointer;
+    }
+    .card-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .read_more {
+        margin-left: 15vw;
+        margin-top: -4vh;
+        margin-bottom: 20vh;
+        width: 15vw;
+        font-size: 0.6em;
+        color: #007AE9;
+        cursor: pointer;
+    }

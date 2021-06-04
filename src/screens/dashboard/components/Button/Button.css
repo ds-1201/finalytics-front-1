@@ -1,0 +1,23 @@
+.option-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 1px solid #6F6C99;
+    height: 55px;
+    border-radius: 10px;
+    margin-left: 40px;
+    background: none;
+}
+
+.option-button-text {
+    align-items: center;
+    line-height: 0px;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.selected {
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
+}

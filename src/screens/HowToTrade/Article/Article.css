@@ -1,0 +1,36 @@
+.article-container {
+    margin-top: 2vh;
+    
+}
+
+.article {
+    color: #FFFFFF;
+    width: 85%;
+    margin-top: 24vh;
+    font-size: 1em;
+    line-height: 3.2vh;
+}
+#defhead{
+    font-size:1.15em;
+}
+#subheadratio{
+    font-size:1.5em;
+    text-align: center;
+}
+#ratiotable{
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+#tdtr {
+    border: 1px solid hsl(229, 88%, 17%);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  #tr:nth-child(even) {
+    background-color: #2693be;
+  }

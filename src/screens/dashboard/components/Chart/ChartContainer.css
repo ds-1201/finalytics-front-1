@@ -1,0 +1,74 @@
+.chart-container-data {
+  margin-left: 7vw;
+  margin-top: 5vh;
+  color: white;
+}
+
+.chart-container-data-current {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chart-container-outer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+
+.chart-container {
+  height: 48vh;
+  width: 40vw;
+}
+
+.interval-btn-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1vh;
+  margin-right: 0vw;
+}
+
+.interval-btn {
+  background: none;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-right: 1px solid;
+  color: #59588d;
+  width: 4vw;
+}
+
+.selected-btn {
+  border-bottom: 3px solid green;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.stock-details-container {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  color: #242427;
+  margin-left: 5vw;
+}
+
+.stock-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+.select {
+  margin: 10px;
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.stock-details {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 60px;
+}

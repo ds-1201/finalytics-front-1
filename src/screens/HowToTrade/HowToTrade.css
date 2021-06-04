@@ -1,0 +1,17 @@
+/* Css of the HowToTrade.js goes here! */
+
+.howtotrade-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 4vh;
+    left: 25vw;
+}
+
+.card-list-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 17vh;
+    left: 24.5vw;
+}

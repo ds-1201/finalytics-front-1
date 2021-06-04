@@ -1,0 +1,73 @@
+.container {
+  background: radial-gradient(
+    123.22% 129.67% at 100.89% -5.6%,
+    #201d47 0%,
+    #17153a 100%
+  );
+}
+
+.wallet-list-container {
+  display: flex;
+  margin-left: 4.5vw;
+}
+
+.wallet-list-title {
+  margin: 25px 0px 21px 65px;
+  color: #b1afcd;
+}
+#historytable {
+  /* margin-right: 80vw; */
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  margin-left: 55vw;
+  margin-right: 0vw;
+  border-collapse: collapse;
+  width: 25vw;
+  height: 15vw;
+}
+#tdtr {
+  border: 1px solid hsl(229, 88%, 17%);
+  text-align: left;
+  padding: 8px;
+}
+#histitle {
+  margin-left: 65vw;
+  margin-top: 0vh;
+}
+
+#flexdash {
+  display: flex;
+  margin-right: 5vw;
+}
+
+#flexchild:first-child {
+  margin-right: 20px;
+}
+#dashboard-graphs {
+  display: flex;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+}
+
+#trends {
+  margin-left: 15vw;
+  color: white;
+}
+#dashboard-graphs {
+  margin-top: 2vh;
+  margin-left: 5vw;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0.125rem;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+  border-radius: 0.125rem;
+  height: 100px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.125rem;
+  background-color: gray;
+}
