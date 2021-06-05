@@ -14,7 +14,7 @@
 }
 
 .lscg-logo {
-    margin-top: 5vh;
+    margin-top: 3vh;
     width: 180px;
     height: 128px;
 }
@@ -22,7 +22,7 @@
 .auth-left-text {
     width: 459.99px;
     height: 68px;
-    margin-top: 1vh;
+    margin-top: 0vh;
     font-family: Inter;
     font-style: normal;
     font-weight: 900;
@@ -33,7 +33,7 @@
 
 }
 .auth-image {
-    margin-top: 5vh;
+    margin-top: 1vh;
     height: 55vh;
     width:  100%;
 }

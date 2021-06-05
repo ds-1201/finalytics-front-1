@@ -9,7 +9,18 @@
 .stock-details {
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: rgb(135, 214, 240);
     margin-left: 0vw;
-
+}
+#compname{
+    font-size:1.2em;
+}
+#compvalue{
+    font-size: 1.2em;
+}
+#compindustry{
+    font-size: 1.1em;
+}
+#compsector{
+    font-size: 1.1em;
 }

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./StatsTable.css";
+import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -10,7 +11,15 @@ import Paper from "@material-ui/core/Paper";
 import MuiTableCell from "@material-ui/core/TableCell";
 import { withStyles } from "@material-ui/core/styles";
 
-const StatsTable = () => {
+const StatsTable = ({ currentStock }) => {
+  const [dayRange, setDayRange] = useState({
+    minimum: "",
+    maximum: "",
+  });
+  const [yearRange, setYearRange] = useState({
+    minimum: "",
+    maximum: "",
+  });
   const TableCell = withStyles({
     root: {
       borderBottom: "none",

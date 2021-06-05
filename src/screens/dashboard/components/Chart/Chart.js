@@ -66,6 +66,7 @@ export default class Chart extends React.Component {
               {
                 ticks: {
                   fontColor: "#59588D",
+                  display: this.props.main,
                 },
               },
             ],
@@ -73,6 +74,7 @@ export default class Chart extends React.Component {
               {
                 ticks: {
                   fontColor: "#59588D",
+                  display: this.props.main,
                 },
               },
             ],

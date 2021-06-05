@@ -65,7 +65,7 @@ function ChartContainer(props) {
     <React.Fragment>
       <div className="chart-container-data">
         <div className="chart-container-data-current">
-          {/* <h3>{props.currentStock.Name}</h3> */}
+          <h3>{props.currentStock.Name}</h3>
           <h3
             className={
               changePercent > 0
@@ -101,6 +101,7 @@ function ChartContainer(props) {
             data={stocks}
             interval={duration}
             name={props.currentStock.Name}
+            main={true}
           />
         </div>
         <StockDetails

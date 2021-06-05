@@ -27,8 +27,8 @@
 .text-field {
     width: 200%;
     height: 50px;
-    color: #FFFFFF;
-    background: #292836;
+    color: black;
+    background: white;
     border-radius: 12px;
 }
 

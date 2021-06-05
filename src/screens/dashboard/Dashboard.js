@@ -3,26 +3,12 @@ import "./Dashboard.css";
 import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import ChartContainer from "./components/Chart/ChartContainer";
-import { Data } from "./../../data";
-import TrendChart from "./components/Trends/Chart/TrendChart";
-import StatsTable from "./components/Table/StatsTable";
-
-function getRandom(arr, n) {
-  var result = new Array(n),
-    len = arr.length,
-    taken = new Array(len);
-  if (n > len)
-    throw new RangeError("getRandom: more elements taken than available");
-  while (n--) {
-    var x = Math.floor(Math.random() * len);
-    result[n] = arr[x in taken ? taken[x] : x];
-    taken[x] = --len in taken ? taken[len] : len;
-  }
-  return result;
-}
+import CryptoChartContainer from "./components/Chart/CryptoChartContainer";
+// import TrendList from "./components/Trends/TrendList";
+import SectorTrends from "./components/Trends/SectorTrends";
 
 function Dashboard() {
-  const [showStocks, showstocks] = useState(true);
+  const [showStocks, showstocks] = useState(false);
   const [clicked, setClicked] = useState(0);
   const [currentStock, setCurrentStock] = useState({
     Symbol: "ABC",
@@ -33,17 +19,6 @@ function Dashboard() {
     Sector: "Health Care",
     Industry: "Other Pharmaceuticals",
   });
-  const [sectorStocks, setSectorStocks] = useState([]);
-
-  useEffect(() => {
-    const trendStocks = Data.filter((stock) => {
-      if (stock.Sector === currentStock.Sector) {
-        return stock;
-      }
-    });
-
-    setSectorStocks(getRandom(trendStocks, 4));
-  }, [currentStock]);
 
   const onClickHandler = (id) => {
     setClicked(id);
@@ -75,25 +50,10 @@ function Dashboard() {
           {showStocks ? (
             <ChartContainer currentStock={currentStock} />
           ) : (
-            <h2>CryptoCurrencies</h2>
+            <CryptoChartContainer crypto="btc" />
           )}
         </div>
-        <div id="flexdash">
-          <div className="dashboard-trends-container" id="dashboard-flexchild">
-            <h1 id="trends">Trends</h1>
-            <div id="dashboard-graphs">
-              {sectorStocks.map((sectorStock) => (
-                <TrendChart
-                  key={sectorStock.Symbol}
-                  currentStock={sectorStock}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="dashboard-statistics">
-            <StatsTable />
-          </div>
-        </div>
+        <SectorTrends currentStock={currentStock} />
       </div>
     </div>
   );
@@ -140,35 +100,4 @@ export default Dashboard;
             </tr>
           </table> 
 </div>; */
-}
-
-{
-  /* <div id="g1">
-            {sectorStocks.length > 0 ? (
-              <TrendChart currentStock={sectorStocks[0]} />
-            ) : (
-              <h2>Sector Loading ...</h2>
-            )}
-          </div>
-          <div id="g2">
-            {sectorStocks.length > 0 ? (
-              <TrendChart currentStock={sectorStocks[0]} />
-            ) : (
-              <h2>Sector Loading ...</h2>
-            )}
-          </div>
-          <div id="g3">
-            {sectorStocks.length > 0 ? (
-              <TrendChart currentStock={sectorStocks[0]} />
-            ) : (
-              <h2>Sector Loading ...</h2>
-            )}
-          </div>
-          <div id="g4">
-            {sectorStocks.length > 0 ? (
-              <TrendChart currentStock={sectorStocks[0]} />
-            ) : (
-              <h2>Sector Loading ...</h2>
-            )}
-          </div> */
 }

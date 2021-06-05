@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Trade.css";
 import { Data } from "./../../data";
-import TrendChart from "../dashboard/components/Trends/Chart/TrendChart";
+import TrendChart from "./../dashboard/components/Chart/TrendChart";
 
 function getRandom(arr, n) {
   var result = new Array(n),

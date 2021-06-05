@@ -2,16 +2,13 @@
   margin-left: 7vw;
   margin-top: 5vh;
   color: white;
-  width: 40vw;
 }
 
 .chart-container-data-current {
   width: 40%;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  position: relative;
-  left: 85%;
+  justify-content: space-between;
 }
 .chart-container-outer {
   display: flex;
@@ -34,12 +31,16 @@
 
 .interval-btn {
   background: none;
-  font-size: 1em;
-  outline: none;
-  border: none;
-  border-right: 1px solid;
-  color: #59588d;
-  width: 4vw;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    border-right: 1px solid;
+    color: #211f85;
+    width: 4vw;
+    background-color: rgb(88, 198, 235);
+    border-radius: 10px;
+    margin-right: 5px;
+    height: 5vh;
 }
 
 .selected-btn {

@@ -1,0 +1,22 @@
+#flexdash {
+  display: flex;
+  margin-right: 5vw;
+}
+
+#flexchild:first-child {
+  margin-right: 20px;
+}
+#dashboard-graphs {
+  display: flex;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+}
+
+#trends {
+  margin-left: 15vw;
+  color: white;
+}
+#dashboard-graphs {
+  margin-top: 2vh;
+  margin-left: 5vw;
+}
