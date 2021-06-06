@@ -35,7 +35,12 @@ const CryptoChartContainer = (props) => {
     <div className="cryptoChartContainer">
       {isLoading && <h2>Loading...</h2>}
       {!isLoading && !error && (
-        <Chart name={props.crypto} data={values} interval={duration} />
+        <Chart
+          name={props.crypto.Name}
+          data={values}
+          interval={duration}
+          main={true}
+        />
       )}
       {!isLoading && error && <h2>Data not found Server Error</h2>}
     </div>

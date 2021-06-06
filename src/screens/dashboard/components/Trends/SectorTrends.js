@@ -32,15 +32,15 @@ const SectorTrends = ({ currentStock }) => {
   }, [currentStock]);
   return (
     <div id="flexdash">
-      <div className="dashboard-trends-container" id="dashboard-flexchild">
+      <div className="stocks-trends-container" id="stocks-flexchild">
         <h1 id="trends">Trends</h1>
-        <div id="dashboard-graphs">
+        <div id="stocks-graphs">
           {sectorStocks.map((sectorStock) => (
             <TrendChart key={sectorStock.Symbol} currentStock={sectorStock} />
           ))}
         </div>
       </div>
-      <div className="dashboard-statistics">
+      <div className="stocks-statistics">
         <StatsTable currentStock={currentStock} />
       </div>
     </div>

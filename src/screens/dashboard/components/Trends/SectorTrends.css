@@ -6,7 +6,7 @@
 #flexchild:first-child {
   margin-right: 20px;
 }
-#dashboard-graphs {
+#stocks-graphs {
   display: flex;
   margin-top: 10vh;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
   margin-left: 15vw;
   color: white;
 }
-#dashboard-graphs {
+#stocks-graphs {
   margin-top: 2vh;
   margin-left: 5vw;
 }

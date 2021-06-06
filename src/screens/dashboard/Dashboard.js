@@ -8,7 +8,7 @@ import CryptoChartContainer from "./components/Chart/CryptoChartContainer";
 import SectorTrends from "./components/Trends/SectorTrends";
 
 function Dashboard() {
-  const [showStocks, showstocks] = useState(false);
+  const [showStocks, setShowStocks] = useState(true);
   const [clicked, setClicked] = useState(0);
   const [currentStock, setCurrentStock] = useState({
     Symbol: "ABC",
@@ -19,6 +19,18 @@ function Dashboard() {
     Sector: "Health Care",
     Industry: "Other Pharmaceuticals",
   });
+  const [currentCrypto, setCurrentCrypto] = useState({
+    Symbol: "btc",
+    Name: "Bitcoin",
+  });
+
+  useEffect(() => {
+    if (clicked === 1) {
+      setShowStocks(false);
+    } else {
+      setShowStocks(true);
+    }
+  }, [clicked]);
 
   const onClickHandler = (id) => {
     setClicked(id);
@@ -50,10 +62,14 @@ function Dashboard() {
           {showStocks ? (
             <ChartContainer currentStock={currentStock} />
           ) : (
-            <CryptoChartContainer crypto="btc" />
+            <CryptoChartContainer crypto={currentCrypto} />
           )}
         </div>
-        <SectorTrends currentStock={currentStock} />
+        {showStocks ? (
+          <SectorTrends currentStock={currentStock} />
+        ) : (
+          <h2>CryptoTrend</h2>
+        )}
       </div>
     </div>
   );
