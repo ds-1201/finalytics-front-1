@@ -1,4 +1,8 @@
-h2 {
+.cryptoChartContainer h2 {
   color: white;
   text-align: center;
+}
+
+.cryptoChartContainer {
+  width: 60%;
 }

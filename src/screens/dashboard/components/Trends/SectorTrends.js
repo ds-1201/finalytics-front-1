@@ -3,6 +3,7 @@ import "./SectorTrends.css";
 import { Data } from "./../../../../data";
 import TrendChart from "./../Chart/TrendChart";
 import StatsTable from "./../Table/StatsTable";
+import { checkData } from "./../Axios/axios";
 
 function getRandom(arr, n) {
   var result = new Array(n),
@@ -10,13 +11,33 @@ function getRandom(arr, n) {
     taken = new Array(len);
   if (n > len)
     throw new RangeError("getRandom: more elements taken than available");
+
   while (n--) {
     var x = Math.floor(Math.random() * len);
-    result[n] = arr[x in taken ? taken[x] : x];
-    taken[x] = --len in taken ? taken[len] : len;
+    if (arr) {
+      result[n] = arr[x in taken ? taken[x] : x];
+      taken[x] = --len in taken ? taken[len] : len;
+    }
   }
   return result;
 }
+
+// function getRandom(arr, n) {
+//   let len = arr.length;
+//   let result = new Array(n);
+//   let i = 0;
+//   while (i < n) {
+//     var x = Math.floor(Math.random() * len);
+//     axios.po
+//     // if () {
+//     //   if (arr[x] in result) {
+//     //     continue;
+//     //   }
+//     //   result[i] = arr[x];
+//     //   i++;
+//     // }
+//   }
+// }
 
 const SectorTrends = ({ currentStock }) => {
   const [sectorStocks, setSectorStocks] = useState([]);

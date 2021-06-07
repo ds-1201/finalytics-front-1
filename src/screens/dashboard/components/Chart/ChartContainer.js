@@ -30,7 +30,7 @@ function ChartContainer(props) {
     setIsLoading(true);
     axios
       .post(
-        "https://finaapi.fintract.co.uk/stocks-graph/",
+        "https://finalyticsad.fintract.co.uk/stocks-graph/",
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
       )
       .then((res) => {

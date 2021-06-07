@@ -13,7 +13,7 @@ const CryptoChartContainer = (props) => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .post("https://finaapi.fintract.co.uk/crypto-graph/", `crypto=btc`)
+      .post("https://finalyticsad.fintract.co.uk/crypto-graph/", `crypto=btc`)
       .then((res) => {
         const data = res.data.Crypto_data;
 
