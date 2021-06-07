@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Stats.css";
 import axios from "axios";
-import { apiUrl } from "./../Api/api";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -25,10 +24,7 @@ function convertToInternationalCurrencySystem(labelValue) {
     : Math.abs(Number(labelValue));
 }
 
-const StatsTable = ({ currentStock }) => {
-  useEffect(() => {
-    axios.post("");
-  }, [currentStock]);
+const CryptoStats = ({ crypto }) => {
   const [dayRange, setDayRange] = useState({
     minimum: "",
     maximum: "",
@@ -58,7 +54,7 @@ const StatsTable = ({ currentStock }) => {
   return (
     <React.Fragment>
       <div>
-        <h2 id="histitle">Key Stats</h2>
+        <h2 id="histitle">{crypto.Symbol.toUpperCase()} Price Statistics</h2>
       </div>
       <TableContainer
         cellpadding="0"
@@ -79,7 +75,7 @@ const StatsTable = ({ currentStock }) => {
               id="Even1"
             >
               <TableCell align="left" style={{ width: "0vw" }}>
-                Previous Close
+                {crypto.Name} Price
               </TableCell>
               <TableCell align="left" style={{ width: "0vw" }}>
                 $649.78
@@ -150,4 +146,4 @@ const StatsTable = ({ currentStock }) => {
   );
 };
 
-export default StatsTable;
+export default CryptoStats;

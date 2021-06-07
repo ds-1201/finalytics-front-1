@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TrendChart.css";
 import axios from "axios";
+import { apiUrl } from "./../Api/api";
 import Chart from "./Chart";
 
 const TrendChart = (props) => {
@@ -19,7 +20,7 @@ const TrendChart = (props) => {
     setIsLoading(true);
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/stocks-graph/",
+        apiUrl.stocks,
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
       )
       .then((res) => {

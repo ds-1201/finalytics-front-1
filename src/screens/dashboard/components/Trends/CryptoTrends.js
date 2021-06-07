@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CryptoTrends.css";
+import CryptoStats from "./../Table/CryptoStats";
 
 function getRandom(arr, n) {
   var result = new Array(n),
@@ -15,7 +16,7 @@ function getRandom(arr, n) {
   return result;
 }
 
-const CryptoTrends = () => {
+const CryptoTrends = ({ crypto }) => {
   const [cryptos, SetCryptos] = useState(["btc", "eth", "btc", "eth"]);
 
   // useEffect(() => {
@@ -30,16 +31,16 @@ const CryptoTrends = () => {
 
   return (
     <div className="cryptoTrends">
-      <div className="crypto-trends-container">
+      {/* <div className="crypto-trends-container">
         <h1 id="trends">Trends</h1>
         <div id="crypto-graphs">
           {sectorStocks.map((sectorStock) => (
             <TrendChart key={sectorStock.Symbol} currentStock={sectorStock} />
           ))}
         </div>
-      </div>
+      </div> */}
       <div className="crypto-statistics">
-        <StatsTable currentStock={currentStock} />
+        <CryptoStats crypto={crypto} />
       </div>
     </div>
   );

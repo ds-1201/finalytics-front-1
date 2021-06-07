@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { apiUrl } from "./../Api/api";
 import Chart from "./Chart";
 import "./ChartContainer.css";
 import StockDetails from "./StockDetails";
@@ -30,7 +31,7 @@ function ChartContainer(props) {
     setIsLoading(true);
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/stocks-graph/",
+        apiUrl.stocks,
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
       )
       .then((res) => {

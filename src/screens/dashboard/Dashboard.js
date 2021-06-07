@@ -6,6 +6,7 @@ import ChartContainer from "./components/Chart/ChartContainer";
 import CryptoChartContainer from "./components/Chart/CryptoChartContainer";
 // import TrendList from "./components/Trends/TrendList";
 import SectorTrends from "./components/Trends/SectorTrends";
+import CryptoTrends from "./components/Trends/CryptoTrends";
 
 function Dashboard() {
   const [showStocks, setShowStocks] = useState(true);
@@ -68,7 +69,7 @@ function Dashboard() {
         {showStocks ? (
           <SectorTrends currentStock={currentStock} />
         ) : (
-          <h2>CryptoTrend</h2>
+          <CryptoTrends crypto={currentCrypto} />
         )}
       </div>
     </div>
