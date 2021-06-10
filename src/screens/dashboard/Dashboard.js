@@ -2,11 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
-import ChartContainer from "./components/Chart/ChartContainer";
-import CryptoChartContainer from "./components/Chart/CryptoChartContainer";
-// import TrendList from "./components/Trends/TrendList";
-import SectorTrends from "./components/Trends/SectorTrends";
-import CryptoTrends from "./components/Trends/CryptoTrends";
+import Stocks from "./Stocks";
+import Crypto from "./Crypto";
 
 function Dashboard() {
   const [showStocks, setShowStocks] = useState(true);
@@ -59,17 +56,10 @@ function Dashboard() {
             onClick={onClickHandler}
           />
         </div>
-        <div>
-          {showStocks ? (
-            <ChartContainer currentStock={currentStock} />
-          ) : (
-            <CryptoChartContainer crypto={currentCrypto} />
-          )}
-        </div>
         {showStocks ? (
-          <SectorTrends currentStock={currentStock} />
+          <Stocks currentStock={currentStock} />
         ) : (
-          <CryptoTrends crypto={currentCrypto} />
+          <Crypto currentCrypto={currentCrypto} />
         )}
       </div>
     </div>

@@ -26,9 +26,6 @@ function convertToInternationalCurrencySystem(labelValue) {
 }
 
 const StatsTable = ({ currentStock }) => {
-  useEffect(() => {
-    axios.post("");
-  }, [currentStock]);
   const [dayRange, setDayRange] = useState({
     minimum: "",
     maximum: "",
@@ -37,6 +34,55 @@ const StatsTable = ({ currentStock }) => {
     minimum: "",
     maximum: "",
   });
+  const [dividendYeild, setDividendYeild] = useState("");
+  const [marketCap, setMarketCap] = useState("");
+  const [volume, steVolume] = useState("");
+  const [pe, setPe] = useState("");
+  const [prevClose, setPrevClose] = useState("");
+
+  // useEffect(() => {
+  //   const response = axios
+  //     .post(
+  //       apiUrl.stocks,
+  //       `companycode=${currentStock.Symbol}&period=${"1y"}&interval=${"1d"}`
+  //     )
+  //     .then((res) => {
+  //       const data = res.data;
+  //       console.log(data.Volume.reduce((a, b) => a + b, 0));
+  //     })
+  //     .catch(() => {});
+
+  // }, [currentStock]);
+
+  // useEffect(() => {
+  //   axios
+  //     .post(
+  //       apiUrl.stocks,
+  //       `companycode=${currentStock.Symbol}&period=${"1y"}&interval=${"1d"}`
+  //     )
+  //     .then((res) => {
+  //       // console.log(res);
+  //       const data = res.data.info;
+  // setVolume(data.volume);
+  //  setMarketCap(data.marketCap);
+  // setDividendYeild(data.dividendYield*100);
+  //       setPrevClose(data.previousClose);
+  //       setDayRange({
+  //         minimum: data.dayLow,
+  //         maximum: data.dayHigh,
+  //       });
+  //       setYearRange({
+  //         minimum: data.fiftyTwoWeekLow,
+  //         maximum: data.fiftyTwoWeekHigh,
+  //       });
+  //       return res;
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       return err;
+  //     });
+  // }, [currentStock]);
+
   const TableCell = withStyles({
     root: {
       borderBottom: "none",
@@ -82,7 +128,7 @@ const StatsTable = ({ currentStock }) => {
                 Previous Close
               </TableCell>
               <TableCell align="left" style={{ width: "0vw" }}>
-                $649.78
+                ${prevClose}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -96,12 +142,14 @@ const StatsTable = ({ currentStock }) => {
                 Day Range
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                $100-$200
+                ${dayRange.minimum} - ${dayRange.maximum}
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
-              <TableCell className={classes.tableCell}>Year Range</TableCell>
-              <TableCell className={classes.tableCell}>$200-$300</TableCell>
+              <TableCell className={classes.tableCell}>52 Week Range</TableCell>
+              <TableCell className={classes.tableCell}>
+                ${yearRange.minimum} - ${yearRange.maximum}
+              </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">

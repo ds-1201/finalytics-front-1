@@ -89,10 +89,10 @@ const CryptoStats = ({ crypto }) => {
                 id="od1"
                 style={{ width: 100 }}
               >
-                Day Range
+                Price Change
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                $100-$200
+                $4962.61
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
@@ -104,7 +104,7 @@ const CryptoStats = ({ crypto }) => {
                 Market Cap
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                400 USD
+                0.07641
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
@@ -113,31 +113,31 @@ const CryptoStats = ({ crypto }) => {
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">
-                PE Ratio
+                24 Low/24 High
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                68.23
+                $31,114.44 / $36,337.67
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>
-                Dividend Yield
+                Trading Volume
               </TableCell>
-              <TableCell className={classes.tableCell}>0.10%</TableCell>
+              <TableCell className={classes.tableCell}>
+                $51,920,293,702.68
+              </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">
-                CDP Climate Change
+                Market Dominance
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                A-
+                43.30%
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
-              <TableCell className={classes.tableCell}>
-                Primary Exchange
-              </TableCell>
-              <TableCell className={classes.tableCell}>NASDAQ</TableCell>
+              <TableCell className={classes.tableCell}>Market Rank</TableCell>
+              <TableCell className={classes.tableCell}>#1</TableCell>
             </TableRow>
           </TableBody>
         </Table>

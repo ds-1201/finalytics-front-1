@@ -3,7 +3,8 @@ import "./SectorTrends.css";
 import { Data } from "./../../../../data";
 import TrendChart from "./../Chart/TrendChart";
 import StatsTable from "./../Table/StatsTable";
-import { checkData } from "./../Axios/axios";
+import axios from "axios";
+import { apiUrl } from "./../Api/api";
 
 function getRandom(arr, n) {
   var result = new Array(n),
@@ -14,29 +15,31 @@ function getRandom(arr, n) {
 
   while (n--) {
     var x = Math.floor(Math.random() * len);
-    if (arr) {
-      result[n] = arr[x in taken ? taken[x] : x];
-      taken[x] = --len in taken ? taken[len] : len;
-    }
+    result[n] = arr[x in taken ? taken[x] : x];
+    taken[x] = --len in taken ? taken[len] : len;
   }
   return result;
 }
 
-// function getRandom(arr, n) {
-//   let len = arr.length;
-//   let result = new Array(n);
-//   let i = 0;
-//   while (i < n) {
-//     var x = Math.floor(Math.random() * len);
-//     axios.po
-//     // if () {
-//     //   if (arr[x] in result) {
-//     //     continue;
-//     //   }
-//     //   result[i] = arr[x];
-//     //   i++;
-//     // }
-//   }
+// async function getMultiple(stocks) {
+//   let users = [];
+//   await Promise.all(
+//     stocks.map((obj) =>
+//       axios
+//         .post(
+//           apiUrl.stocks,
+//           `companycode=${obj.Symbol}&period=${"1d"}&interval=${"5m"}`
+//         )
+//         .then((response) => {
+//           // do something with response
+//           users.push(response);
+//         })
+//         .catch((err) => {
+//           console.log(err);
+//         })
+//     )
+//   );
+//   return users;
 // }
 
 const SectorTrends = ({ currentStock }) => {
@@ -48,7 +51,21 @@ const SectorTrends = ({ currentStock }) => {
         return stock;
       }
     });
+    // const tStocks = getRandom(trendStocks, 10);
+    // const getS = async () => {
+    //   let s = await getMultiple(tStocks);
+    //   return s;
+    // };
 
+    // console.log(getS());
+    // while (s.length >= 4) {
+    //   s = getStocks(getRandom(trendStocks, 10));
+    // }
+
+    // console.log();
+    // console.log(result);
+    // console.log(errorArray);
+    // setSectorStocks(result);
     setSectorStocks(getRandom(trendStocks, 4));
   }, [currentStock]);
   return (

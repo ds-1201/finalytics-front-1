@@ -1,0 +1,23 @@
+.cryptoList #histitle {
+  margin-left: 15vw;
+  margin-top: 10vh;
+  color: white;
+}
+
+.cryptoList #statstable {
+  width: 40vw;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+}
+.cryptoList #Even1 {
+  background-color: rgb(104, 104, 139);
+  color: white;
+}
+.cryptoList #od1 {
+  color: rgb(47, 175, 218);
+}
+
+.cryptoList #Odd1 {
+  background-color: #1b1940;
+}

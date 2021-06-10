@@ -23,7 +23,7 @@ function SideBar(props){
         <>
             <div className="container">
             <div className="sidebar-container">
-                <img className="img" src="logotransparent.png" />
+                <img className="img" src="FG LOGO_white.png" />
                 {
                     list.map((element,i) => {
                         return <Button key={i} id={i} name={element} active={clicked} onClickHandler={onClickHandler}/>;
