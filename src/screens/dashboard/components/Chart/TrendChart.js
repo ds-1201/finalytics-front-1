@@ -83,6 +83,8 @@ const TrendChart = (props) => {
             interval={duration}
             name={props.currentStock.Name}
             main={false}
+            prevClose = {prevClose}
+            currentValue = {currentValue}
           />
         </React.Fragment>
       )}

@@ -41,16 +41,6 @@ const StatsTable = ({ currentStock }) => {
   const [prevClose, setPrevClose] = useState("");
   const [marketPrice, setMarketPrice] = useState("");
 
-  // useEffect(() => {
-  //   const response = axios
-  //     .post(apiUrl.info, `companycode=${currentStock.Symbol}`)
-  //     .then((res) => {
-  //       const data = res.data;
-  //       console.log(data.Volume.reduce((a, b) => a + b, 0));
-  //     })
-  //     .catch(() => {});
-  // }, [currentStock]);
-
   useEffect(() => {
     axios
       .post(apiUrl.info, `companycode=${currentStock.Symbol}`)

@@ -9,7 +9,7 @@ export default class Chart extends React.Component {
 
   render() {
     var color;
-    if (this.props.data[0] - this.props.data[this.props.data.length - 1] <= 0) {
+    if (this.props.currentValue - this.props.prevClose >= 0) {
       color = "#34a853";
     } else {
       color = "#EA4335";

@@ -117,6 +117,8 @@ function ChartContainer(props) {
             interval={duration}
             name={props.currentStock.Name}
             main={true}
+            prevClose = {prevClose}
+            currentValue = {currentValue}
           />
         </div>
         <StockDetails
@@ -132,39 +134,3 @@ function ChartContainer(props) {
 
 export default ChartContainer;
 
-{
-  /* useEffect(() => {
-        console.log(props.currentStock);
-        var new_obj = props.currentStock;
-        const options = {
-            method: 'GET',
-            url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-chart',
-            params: {interval: interval, symbol: props.currentStock.Symbol, range: range, region: 'US'},
-            headers: {
-            'x-rapidapi-key': process.env.REACT_APP_X_RAPID_API_KEY,
-            'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
-              }
-          };
-       axios.request(options)
-        .then(res=>{
-            new_obj.data = res.data.chart.result[0].indicators.quote[0].close;
-            setStocks(res.data.chart.result[0].indicators.quote[0].close);
-            setCurrentValue(res.data.chart.result[0].meta.regularMarketPrice);
-            var new_arr = []
-            {   
-                res.data.chart.result[0].timestamp.map(element => {
-                    var date = new Date(element*1000);
-                    new_arr.push(date.toLocaleString());
-                })
-            }
-            setDuration(new_arr);
-            new_obj.currentValue = res.data.chart.result[0].meta.regularMarketPrice;
-            new_obj.duration = new_arr;
-            let new_array=[new_obj,...stockList];
-            setStockList(new_array);
-        })
-        .catch(err=>{
-            console.log(err);
-        })
-    },[props.currentStock,range]) */
-}
