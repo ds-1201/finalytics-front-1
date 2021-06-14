@@ -10,8 +10,9 @@ function ChartContainer(props) {
   const [stocks, setStocks] = useState([]);
   const [duration, setDuration] = useState([]);
   const [currentValue, setCurrentValue] = useState("");
-  const [startValue, setStartValue] = useState("");
+  // const [startValue, setStartValue] = useState("");
   const [changePercent, setChangePercent] = useState("");
+  const [prevClose, setPrevClose] = useState("");
   const [range, setRange] = useState("1d");
   const [interval, setInterval] = useState("5m");
   const [currentRange, setCurrentRange] = useState("1d");
@@ -28,6 +29,19 @@ function ChartContainer(props) {
   };
 
   useEffect(() => {
+    axios
+      .post(apiUrl.info, `companycode=${props.currentStock.Symbol}`)
+      .then((response) => {
+        const data = response.data.info;
+        setPrevClose(data.previousClose);
+        setCurrentValue(data.regularMarketPrice);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
     setIsLoading(true);
     axios
       .post(
@@ -39,8 +53,8 @@ function ChartContainer(props) {
           setDuration(res.data.TimeStamp[prop]);
         }
         setStocks(res.data.Close);
-        setStartValue(res.data.Close[0]);
-        setCurrentValue(res.data.Close[res.data.Close.length - 1]);
+        // setStartValue(res.data.Close[0]);
+        // setCurrentValue(res.data.Close[res.data.Close.length - 1]);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -50,11 +64,11 @@ function ChartContainer(props) {
 
   useEffect(() => {
     const newPercent = (
-      ((+currentValue - +startValue) / +startValue) *
+      ((+currentValue - +prevClose) / +prevClose) *
       100
     ).toFixed(2);
     setChangePercent(newPercent);
-  }, [currentValue, startValue]);
+  }, [currentValue, prevClose]);
 
   const handleClick = (e) => {
     setRange(e.target.id);

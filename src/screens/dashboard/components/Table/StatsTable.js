@@ -36,52 +36,48 @@ const StatsTable = ({ currentStock }) => {
   });
   const [dividendYeild, setDividendYeild] = useState("");
   const [marketCap, setMarketCap] = useState("");
-  const [volume, steVolume] = useState("");
-  const [pe, setPe] = useState("");
+  const [volume, setVolume] = useState("");
+  const [eps, setEps] = useState("");
   const [prevClose, setPrevClose] = useState("");
+  const [marketPrice, setMarketPrice] = useState("");
 
   // useEffect(() => {
   //   const response = axios
-  //     .post(
-  //       apiUrl.stocks,
-  //       `companycode=${currentStock.Symbol}&period=${"1y"}&interval=${"1d"}`
-  //     )
+  //     .post(apiUrl.info, `companycode=${currentStock.Symbol}`)
   //     .then((res) => {
   //       const data = res.data;
   //       console.log(data.Volume.reduce((a, b) => a + b, 0));
   //     })
   //     .catch(() => {});
-
   // }, [currentStock]);
 
-  // useEffect(() => {
-  //   axios
-  //     .post(
-  //       apiUrl.stocks,
-  //       `companycode=${currentStock.Symbol}&period=${"1y"}&interval=${"1d"}`
-  //     )
-  //     .then((res) => {
-  //       // console.log(res);
-  //       const data = res.data.info;
-  // setVolume(data.volume);
-  //  setMarketCap(data.marketCap);
-  // setDividendYeild(data.dividendYield*100);
-  //       setPrevClose(data.previousClose);
-  //       setDayRange({
-  //         minimum: data.dayLow,
-  //         maximum: data.dayHigh,
-  //       });
-  //       setYearRange({
-  //         minimum: data.fiftyTwoWeekLow,
-  //         maximum: data.fiftyTwoWeekHigh,
-  //       });
-  //       return res;
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       return err;
-  //     });
-  // }, [currentStock]);
+  useEffect(() => {
+    axios
+      .post(apiUrl.info, `companycode=${currentStock.Symbol}`)
+      .then((res) => {
+        console.log(res);
+        const data = res.data.info;
+        setVolume(data.volume);
+        setEps(data.trailingEps);
+        setMarketCap(data.marketCap);
+        setMarketPrice(data.regularMarketPrice);
+        setDividendYeild((data.dividendYield * 100).toFixed(2));
+        setPrevClose(data.previousClose);
+        setDayRange({
+          minimum: data.dayLow.toFixed(2),
+          maximum: data.dayHigh.toFixed(2),
+        });
+        setYearRange({
+          minimum: data.fiftyTwoWeekLow.toFixed(2),
+          maximum: data.fiftyTwoWeekHigh.toFixed(2),
+        });
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
+  }, [currentStock]);
 
   const TableCell = withStyles({
     root: {
@@ -156,26 +152,28 @@ const StatsTable = ({ currentStock }) => {
                 Market Cap
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                400 USD
+                {convertToInternationalCurrencySystem(+marketCap)} USD
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>Volume</TableCell>
-              <TableCell className={classes.tableCell}>8.22M</TableCell>
+              <TableCell className={classes.tableCell}>{volume}</TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">
                 PE Ratio
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                68.23
+                {eps > 0 ? `${(marketPrice / eps).toFixed(2)}` : "N/A"}
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>
                 Dividend Yield
               </TableCell>
-              <TableCell className={classes.tableCell}>0.10%</TableCell>
+              <TableCell className={classes.tableCell}>
+                {dividendYeild}%
+              </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">

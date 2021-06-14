@@ -12,9 +12,22 @@ const TrendChart = (props) => {
   const [range] = useState("1d");
   const [interval] = useState("5m");
   const [currentValue, setCurrentValue] = useState("");
-  const [openValue, setOpenValue] = useState("");
-  // const [change, setChange] = useState(0.0);
-  const [changePercent, setChangePercent] = useState(0.0);
+  // const [startValue, setStartValue] = useState("");
+  const [changePercent, setChangePercent] = useState("");
+  const [prevClose, setPrevClose] = useState("");
+
+  useEffect(() => {
+    axios
+      .post(apiUrl.info, `companycode=${props.currentStock.Symbol}`)
+      .then((response) => {
+        const data = response.data.info;
+        setPrevClose(data.previousClose);
+        setCurrentValue(data.regularMarketPrice);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,8 +41,8 @@ const TrendChart = (props) => {
           setDuration(res.data.TimeStamp[prop]);
         }
         setStocks(res.data.Close);
-        setOpenValue(res.data.Close[0]);
-        setCurrentValue(res.data.Close[res.data.Close.length - 1]);
+        // setOpenValue(res.data.Close[0]);
+        // setCurrentValue(res.data.Close[res.data.Close.length - 1]);
         setShowstocks(true);
         setIsLoading(false);
       })
@@ -41,11 +54,11 @@ const TrendChart = (props) => {
 
   useEffect(() => {
     const newPercent = (
-      ((+currentValue - +openValue) / +openValue) *
+      ((+currentValue - +prevClose) / +prevClose) *
       100
     ).toFixed(2);
     setChangePercent(newPercent);
-  }, [currentValue, openValue]);
+  }, [currentValue, prevClose]);
 
   return (
     <div className="trendChart">
