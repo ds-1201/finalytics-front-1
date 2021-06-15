@@ -10,7 +10,7 @@ function Header(props){
                 <p className="header-title-text">Dashboard</p>
             </div>
             <div>
-                <HeaderMenu update={props.update} />
+                <HeaderMenu update={props.update} username={props.username} />
             </div>
         </div>
     );

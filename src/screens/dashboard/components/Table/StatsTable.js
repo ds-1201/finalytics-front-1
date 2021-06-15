@@ -40,6 +40,7 @@ const StatsTable = ({ currentStock }) => {
   const [eps, setEps] = useState("");
   const [prevClose, setPrevClose] = useState("");
   const [marketPrice, setMarketPrice] = useState("");
+  const [open, setOpen] = useState("");
 
   useEffect(() => {
     axios
@@ -53,6 +54,7 @@ const StatsTable = ({ currentStock }) => {
         setMarketPrice(data.regularMarketPrice);
         setDividendYeild((data.dividendYield * 100).toFixed(2));
         setPrevClose(data.previousClose);
+        setOpen(data.open);
         setDayRange({
           minimum: data.dayLow.toFixed(2),
           maximum: data.dayHigh.toFixed(2),
@@ -119,42 +121,58 @@ const StatsTable = ({ currentStock }) => {
             </TableRow>
           </TableHead>
           <TableBody>
+            <TableRow className={classes.tableRow} id="Odd1">
+              <TableCell className={classes.tableCell} id="od1">
+                Open
+              </TableCell>
+              <TableCell className={classes.tableCell} id="od1">
+                ${open}
+              </TableCell>
+            </TableRow>
+            <TableRow className={classes.tableRow} id="Even1">
+              <TableCell className={classes.tableCell}>Day Range</TableCell>
+              <TableCell className={classes.tableCell}>
+                ${dayRange.minimum} - ${dayRange.maximum}
+              </TableCell>
+            </TableRow>
             <TableRow className={classes.tableRow} id="Row1" id="Odd1">
               <TableCell
                 className={classes.tableCell}
                 id="od1"
                 style={{ width: 100 }}
               >
-                Day Range
+                52 Week Range
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                ${dayRange.minimum} - ${dayRange.maximum}
-              </TableCell>
-            </TableRow>
-            <TableRow className={classes.tableRow} id="Even1">
-              <TableCell className={classes.tableCell}>52 Week Range</TableCell>
-              <TableCell className={classes.tableCell}>
                 ${yearRange.minimum} - ${yearRange.maximum}
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tableRow} id="Odd1">
-              <TableCell className={classes.tableCell} id="od1">
-                Market Cap
-              </TableCell>
-              <TableCell className={classes.tableCell} id="od1">
+            <TableRow className={classes.tableRow} id="Even1">
+              <TableCell className={classes.tableCell}>Market Cap</TableCell>
+              <TableCell className={classes.tableCell}>
                 {convertToInternationalCurrencySystem(+marketCap)} USD
               </TableCell>
             </TableRow>
+            <TableRow className={classes.tableRow} id="Odd1">
+              <TableCell className={classes.tableCell} id="od1">
+                Volume
+              </TableCell>
+              <TableCell className={classes.tableCell} id="od1">
+                {volume}
+              </TableCell>
+            </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
-              <TableCell className={classes.tableCell}>Volume</TableCell>
-              <TableCell className={classes.tableCell}>{volume}</TableCell>
+              <TableCell className={classes.tableCell}>PE Ratio</TableCell>
+              <TableCell className={classes.tableCell}>
+                {eps > 0 ? `${(marketPrice / eps).toFixed(2)}` : "N/A"}
+              </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">
-                PE Ratio
+                EPS(TTM){" "}
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                {eps > 0 ? `${(marketPrice / eps).toFixed(2)}` : "N/A"}
+                {eps}{" "}
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
@@ -164,20 +182,6 @@ const StatsTable = ({ currentStock }) => {
               <TableCell className={classes.tableCell}>
                 {dividendYeild}%
               </TableCell>
-            </TableRow>
-            <TableRow className={classes.tableRow} id="Odd1">
-              <TableCell className={classes.tableCell} id="od1">
-                CDP Climate Change
-              </TableCell>
-              <TableCell className={classes.tableCell} id="od1">
-                A-
-              </TableCell>
-            </TableRow>
-            <TableRow className={classes.tableRow} id="Even1">
-              <TableCell className={classes.tableCell}>
-                Primary Exchange
-              </TableCell>
-              <TableCell className={classes.tableCell}>NASDAQ</TableCell>
             </TableRow>
           </TableBody>
         </Table>

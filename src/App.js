@@ -5,9 +5,9 @@ import {
   Redirect,
 } from "react-router-dom";
 import Dashboard from "./screens/dashboard/Dashboard";
-import Trade from "./screens/Trade/Trade";
 import HowToTrade from "./screens/HowToTrade/HowToTrade";
 import SideBar from "./components/Sidebar/SideBar";
+import Trade from "./screens/Trade/Trade";
 import Account_Settings from "./screens/Account_Settings/Account_Settings";
 import SignUp from "./screens/Authentication/SignUp";
 import SignIn from "./screens/Authentication/SignIn";
@@ -26,10 +26,15 @@ function App() {
           <Route path="/signup" exact component={SignUp} />
           <Route path="/signin" exact component={SignIn} />
           <SideBar>
-            <Route exact path="/">
-              <Redirect to="/dashboard" />
-            </Route>
-            <Route path="/dashboard" exact component={Dashboard} />
+            <Route exact path="/" component={Dashboard} />
+            {/* <Redirect to="/dashboard" />
+        </Route> */}
+            {/* <Route path="/dashboard" exact component={Dashboard} /> */}
+            <Route
+              path="/dashboard"
+              key="main-dashboard"
+              component={Dashboard}
+            />
             <Route path="/wallet" exact component={Wallet} />
             <Route path="/trade" exact component={Trade} />
             <Route path="/tradehistory" exact component={TradeHistory} />
