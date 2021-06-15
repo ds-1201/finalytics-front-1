@@ -10,7 +10,7 @@ const TrendChart = (props) => {
   const [stocks, setStocks] = useState([]);
   const [duration, setDuration] = useState([]);
   const [range] = useState("1d");
-  const [interval] = useState("5m");
+  const [interval] = useState("1m");
   const [currentValue, setCurrentValue] = useState("");
   // const [startValue, setStartValue] = useState("");
   const [changePercent, setChangePercent] = useState("");
@@ -27,7 +27,7 @@ const TrendChart = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [props.currentStock]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -53,10 +53,8 @@ const TrendChart = (props) => {
   }, [props.currentStock, range, interval]);
 
   useEffect(() => {
-    const newPercent = (
-      ((+currentValue - +prevClose) / +prevClose) *
-      100
-    ).toFixed(2);
+    const num = ((+currentValue - +prevClose) / +prevClose) * 100;
+    const newPercent = (Math.round(num * 100) / 100).toFixed(2);
     setChangePercent(newPercent);
   }, [currentValue, prevClose]);
 
@@ -83,8 +81,8 @@ const TrendChart = (props) => {
             interval={duration}
             name={props.currentStock.Name}
             main={false}
-            prevClose = {prevClose}
-            currentValue = {currentValue}
+            prevClose={prevClose}
+            currentValue={currentValue}
           />
         </React.Fragment>
       )}

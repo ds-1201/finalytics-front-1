@@ -54,7 +54,7 @@ const CryptoStats = ({ crypto }) => {
   return (
     <React.Fragment>
       <div>
-        <h2 id="histitle">{crypto.Symbol.toUpperCase()} Price Statistics</h2>
+        <h2 id="histitle"> Price Statistics</h2>
       </div>
       <TableContainer
         cellpadding="0"
@@ -75,7 +75,7 @@ const CryptoStats = ({ crypto }) => {
               id="Even1"
             >
               <TableCell align="left" style={{ width: "0vw" }}>
-                {crypto.Name} Price
+                Price
               </TableCell>
               <TableCell align="left" style={{ width: "0vw" }}>
                 $649.78

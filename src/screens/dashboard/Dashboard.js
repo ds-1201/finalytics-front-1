@@ -17,10 +17,7 @@ function Dashboard() {
     Sector: "Health Care",
     Industry: "Other Pharmaceuticals",
   });
-  const [currentCrypto, setCurrentCrypto] = useState({
-    Symbol: "btc",
-    Name: "Bitcoin",
-  });
+  const [currentCrypto, setCurrentCrypto] = useState("BTC");
 
   useEffect(() => {
     if (clicked === 1) {
@@ -37,7 +34,10 @@ function Dashboard() {
   return (
     <div className="container" id="contscroll">
       <div>
-        <Header update={setCurrentStock} />
+        <Header
+          update={showStocks ? setCurrentStock : setCurrentCrypto}
+          stocks={showStocks}
+        />
         <div className="wallet-list-container">
           <Button
             name="Stocks"

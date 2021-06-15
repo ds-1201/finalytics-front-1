@@ -14,18 +14,18 @@ function ChartContainer(props) {
   const [changePercent, setChangePercent] = useState("");
   const [prevClose, setPrevClose] = useState("");
   const [range, setRange] = useState("1d");
-  const [interval, setInterval] = useState("5m");
+  const [interval, setInterval] = useState("1m");
   const [currentRange, setCurrentRange] = useState("1d");
   const Rangeoptions = ["1d", "5d", "1mo", "6mo", "ytd", "1y", "5y", "max"];
   const Intervaloptions = {
-    "1d": "5m",
-    "5d": "30m",
+    "1d": "1m",
+    "5d": "1m",
     "1mo": "1d",
     "6mo": "1d",
     ytd: "1d",
     "1y": "1d",
     "5y": "1d",
-    max: "1d",
+    max: "1w",
   };
 
   useEffect(() => {
@@ -39,10 +39,11 @@ function ChartContainer(props) {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [props.currentStock]);
 
   useEffect(() => {
     setIsLoading(true);
+
     axios
       .post(
         apiUrl.stocks,
@@ -63,10 +64,8 @@ function ChartContainer(props) {
   }, [props.currentStock, range]);
 
   useEffect(() => {
-    const newPercent = (
-      ((+currentValue - +prevClose) / +prevClose) *
-      100
-    ).toFixed(2);
+    const num = ((+currentValue - +prevClose) / +prevClose) * 100;
+    const newPercent = (Math.round(num * 100) / 100).toFixed(2);
     setChangePercent(newPercent);
   }, [currentValue, prevClose]);
 
@@ -117,8 +116,8 @@ function ChartContainer(props) {
             interval={duration}
             name={props.currentStock.Name}
             main={true}
-            prevClose = {prevClose}
-            currentValue = {currentValue}
+            prevClose={prevClose}
+            currentValue={currentValue}
           />
         </div>
         <StockDetails
@@ -133,4 +132,3 @@ function ChartContainer(props) {
 }
 
 export default ChartContainer;
-
