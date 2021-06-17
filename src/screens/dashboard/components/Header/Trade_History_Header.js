@@ -10,7 +10,7 @@ function Trade_Header(props) {
                 <p className="trade_history">Trade History</p>
             </div>
             <div>
-                <HeaderMenu update={props.update} />
+                
             </div>
         </div>
     );

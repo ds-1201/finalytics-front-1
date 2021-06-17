@@ -1,7 +1,7 @@
 import React from "react";
 // using same css for all the header styling
 import "./Header.css";
-import HeaderMenu from "./HeaderMenu";
+
 
 function Account_Settings() {
   return (
@@ -11,7 +11,7 @@ function Account_Settings() {
           <p className="account_settings">Account Settings</p>
         </div>
         <div>
-          <HeaderMenu />
+     
         </div>
       </div>
     </div>

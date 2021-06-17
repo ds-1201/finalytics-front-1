@@ -8,7 +8,7 @@
 .signup-header {
     width: 184px;
     height: 10px;
-    margin-top: 40px;
+    margin-top: 70px;
     font-family: Inter;
     font-style: normal;
     font-weight: 900;
@@ -27,8 +27,8 @@
 .text-field-up {
     width: 35vw;
     height: 50px;
-    color: black;
-    background: #FFFFFF;
+    background:white;
+
     border-radius: 12px;
 }
 
@@ -64,9 +64,8 @@
 }
 
 .footer-text{
-    width: 350px !important;
-    height: 15px;
 
+    width: 300px !important;
     font-family: Inter;
     font-style: normal;
     font-weight: 300;
@@ -97,10 +96,10 @@
 }
 @media  (max-width:700px){
     .text-field-up{
-        width: 90vw;
+        width: 150%;
     }
     .signup-container {
-       
-        height: fit-content;
+        margin-top: 180px;
+        height: 100%;
     }
 }

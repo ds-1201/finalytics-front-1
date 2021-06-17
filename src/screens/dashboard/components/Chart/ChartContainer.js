@@ -25,7 +25,7 @@ function ChartContainer(props) {
     ytd: "1d",
     "1y": "1d",
     "5y": "1d",
-    max: "1w",
+    max: "1d",
   };
 
   useEffect(() => {
@@ -40,28 +40,29 @@ function ChartContainer(props) {
         console.log(error);
       });
   }, [props.currentStock]);
-
-  useEffect(() => {
+  const getGraphData = () => {
     setIsLoading(true);
-
     axios
       .post(
         apiUrl.stocks,
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
       )
       .then((res) => {
+        console.log(res);
         for (const prop in res.data.TimeStamp) {
           setDuration(res.data.TimeStamp[prop]);
         }
         setStocks(res.data.Close);
-        // setStartValue(res.data.Close[0]);
-        // setCurrentValue(res.data.Close[res.data.Close.length - 1]);
         setIsLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
       });
-  }, [props.currentStock, range]);
+  };
+
+  useEffect(() => {
+    getGraphData();
+  }, [props.currentStock, range, interval]);
 
   useEffect(() => {
     const num = ((+currentValue - +prevClose) / +prevClose) * 100;

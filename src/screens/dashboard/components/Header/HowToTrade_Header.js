@@ -11,7 +11,6 @@ function HowToTrade_Header() {
           <p className="how_to_trade" style={{position: "absolute",top:"45px",left:"380px"}}>Learn How To Trade</p>
         </div>
         <div>
-          <HeaderMenu />
         </div>
       </div>
     </div>

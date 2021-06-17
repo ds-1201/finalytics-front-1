@@ -20,6 +20,7 @@ function SideBar(props) {
     history.push("/");
   }, []);
 
+
   const onClickHandler = (id) => {
     setClicked(id);
     var address = list[id].toLowerCase().split(" ").join("");
@@ -41,9 +42,7 @@ function SideBar(props) {
               />
             );
           })}
-          {/* {
-                    clicked === 0 ? <Popup /> : " "
-                }   */}
+
         </div>
         <div className="child-container">{props.children}</div>
       </div>

@@ -1,6 +1,7 @@
 .search-container {
     display:flex;
     height: 20px;
+    border-radius: 50px;
 }
 
 .search-input {
@@ -13,14 +14,23 @@
 
 #stock-search {
     color: #FFFFFF;
-    background: #5B5A99;
-    fill-opacity: 0.5;
+    background: linear-gradient(90.67deg, #7222e2 8.34%, #C438EF 95.26%);
+    fill-opacity: 0.2;
+    border-radius: 50px;
 }
 
 .search{
-    border-color: #5B5A99;
+    border-color: #fff !important;
 }
 
 .search-Icon {                                  
-    height: 37px;
+    height: 37px; 
+    z-index:100000;
+}
+.PrivateNotchedOutline-root-22{
+    border:0px !important;
+    border-radius: 50px !important;
+}
+#stock-search-label{
+    color: #fff !important;
 }

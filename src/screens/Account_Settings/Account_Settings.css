@@ -62,7 +62,6 @@ label {
 }
 #l4{
   padding-right: 0vw;
-
   float: left;
   position: relative;
   top:-4vh;
@@ -71,7 +70,6 @@ label {
 #l5{
   position: relative;
   padding-right: 0vw;
- 
   float: left;
   top:-4vh;
   left:-7vw;
@@ -114,9 +112,48 @@ select {
   margin-left: 15vw;
   font-family: Arial, Helvetica, sans-serif;
   float: left;
+  border-radius: 50%;
   top: 3vh;
   left:-18vw;
 }
+/* REACT SELECT COMPONENETS */
+
+/* REACT SELECT container unclicked */
+.css-ql68v7-control{
+  background-color: #1B1940 !important;
+  border-radius: 50px !important;
+}
+/* REACT SELECT container clicked */
+.css-n9am0p-control{
+  background-color: #1B1940 !important;
+  border-radius: 50px !important;
+}
+/* REACT SELECT container when a option is selected */
+.css-1uccc91-singleValue{
+  color: #fff !important;
+}
+/* REACT SELECT menu background*/
+.css-182gzek-menu{
+  background-color:#1c1b2a !important;
+  border-radius: 50px !important;
+}
+/* REACT SELECT main menu*/
+.css-4ljt47-MenuList{
+  background-color: #1c1b2a !important;
+  border-radius: 10px !important;
+}
+/* REACT SELECT menu individual options*/
+.css-1ywfzbx-option{
+  background-color: #1c1b2a !important;
+  border-radius: 10px !important;
+  color : #fff !important;
+}
+/* REACT SELECT menu individual options when a option is selected */
+.css-kui00z-option{
+  color: rgb(230, 222, 124) !important;
+  background-color: #38383a !important
+}
+
 #sel1{
   position: relative;
   width: 15vw;

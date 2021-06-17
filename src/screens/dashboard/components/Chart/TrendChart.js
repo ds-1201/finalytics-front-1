@@ -41,8 +41,6 @@ const TrendChart = (props) => {
           setDuration(res.data.TimeStamp[prop]);
         }
         setStocks(res.data.Close);
-        // setOpenValue(res.data.Close[0]);
-        // setCurrentValue(res.data.Close[res.data.Close.length - 1]);
         setShowstocks(true);
         setIsLoading(false);
       })
