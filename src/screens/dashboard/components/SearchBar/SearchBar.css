@@ -34,3 +34,10 @@
 #stock-search-label {
   color: #fff !important;
 }
+
+@media  (max-width:700px){
+    .search-container {
+        /* margin-right: 50vw; */
+        /* width: 20vw; */
+    }
+}

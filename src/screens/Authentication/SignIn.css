@@ -8,7 +8,7 @@
 .signin-header {
     width: 250px;
     height: 58px;
-    margin-top: 130px;
+    /* margin-top: 130px; */
     font-family: Inter;
     font-style: normal;
     font-weight: 900;
@@ -26,7 +26,7 @@
 }
 
 .text-field {
-    width: 200%;
+    width: 40vw;
     height: 50px;
     color: black;
     background: white;
@@ -99,17 +99,17 @@
     text-decoration: underline;
     cursor: pointer;
 }
-@media  (max-width:1000px){
+/* @media  (max-width:1000px){
     .text-field{
         width: 100%;
     }
-}
+} */
 @media  (max-width:700px){
     .text-field{
-        width: 150%;
+        width: 90vw;
     }
     .signin-container {
-        margin-top: 180px;
-        height: 100%;
+        
+        height: max-content;
     }
 }

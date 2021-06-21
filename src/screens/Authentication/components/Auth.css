@@ -20,7 +20,7 @@
 }
 
 .auth-left-text {
-    width: 459.99px;
+    width: 450px;
     height: 68px;
     margin-top: 0vh;
     font-family: Inter;
@@ -42,23 +42,53 @@
     width: 45vw;
     height: 100%;
 }
-@media  (max-width:700px){
-    .auth-right{
-        position:absolute;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+@media  (max-width:1050px){
+    .Auth-container {
+
+        padding-top: 10%;
+
     }
+}
+@media  (max-width:700px){
+
+    .Auth-container {
+        background: linear-gradient(0deg, #17153A, #17153A);
+        width: 100vw;
+        height:fit-content;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     .auth-left {
-        width: 100%;
-        height: 100%;
+
+        width: 100vw;
+        height: 30vh;
         justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
+        align-items: center; 
+    }
+    .auth-left-text {
+        width: 100%;
+        height: 68px;
+        margin-top: 0vh;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+        color: #FFFFFF;
     }
     .auth-image{
         width: 0px;
+        height: 0px;
+    }
+    .auth-right{
+
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* height:100vh; */
     }
 }

@@ -29,7 +29,7 @@ function WithdrawalButton(props){
     }
 
     return(
-        <div style={buttonstyle}>
+        <div className="w-button" style={buttonstyle}>
             <span style={textstyle}>{props.txt}</span>
         </div>
     )

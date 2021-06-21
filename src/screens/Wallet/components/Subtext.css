@@ -14,3 +14,11 @@ line-height: 24px;
 /* identical to box height */
 color: #FFFFFF;
 }
+@media  (max-width:700px){
+    .text-3-container{
+        height:5vh;
+        width:60vw;
+        margin-top:20px;
+        margin-left: 20vw;
+    } 
+}

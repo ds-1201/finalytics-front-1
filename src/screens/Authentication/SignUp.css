@@ -65,7 +65,7 @@
 
 .footer-text{
 
-    width: 300px !important;
+    width: 350px !important;
     font-family: Inter;
     font-style: normal;
     font-weight: 300;
@@ -89,17 +89,16 @@
     color: #FFFFFF;
 
 }
-@media  (max-width:1000px){
+/* @media  (max-width:1000px){
     .text-field-up{
         width: 100%;
     }
-}
+} */
 @media  (max-width:700px){
     .text-field-up{
-        width: 150%;
+        width: 90vw;
     }
     .signup-container {
-        margin-top: 180px;
-        height: 100%;
+        height: fit-content;
     }
 }
