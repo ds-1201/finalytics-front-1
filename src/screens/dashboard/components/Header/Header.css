@@ -1,7 +1,7 @@
 /* Dashboard Header Styling */
 .header-container {
     display: flex;
-    width: 100%;
+    width: 77.6vw;
     height: 10vh;
     margin-top: 5vh;
     margin-left: 4.4vw;
@@ -74,3 +74,16 @@ opacity: 0.9;
     margin-left: 0vw;
     padding-top: 0vh;
 }
+@media  (max-width:700px){
+    .header-container {
+        display: flex;
+       flex-direction: column;
+       margin-bottom: 5vh;
+    }
+    .title-text-container {
+        width: fit-content;
+        margin-left: 15vw;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+  }

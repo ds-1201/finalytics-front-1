@@ -22,3 +22,14 @@
   border-radius: 0.125rem;
   background-color: gray;
 }
+@media  (max-width:700px){
+  .trends-container {
+    margin-left: 5vw;
+  }
+  .trends-graphs {
+    width: 60vw;
+    margin-right: 40vw;
+    display: grid;
+    grid-template-columns: 60vw ;
+  }
+}

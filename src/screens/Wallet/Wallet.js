@@ -12,11 +12,12 @@ import "./Wallet.css";
 function  Wallet(props)
 {
 return(
-
-    <div>
+     
+    <div className="container" id="contscroll">
+     <div id="top-container">
         <Header name={"Wallet"}/>
 
-        <div className= "main-container">
+        <div className= "main-container" >
 
 
             <div className="cards-container">
@@ -73,6 +74,7 @@ return(
                 User
                 </div>
             </div>
+        </div>
         </div>
     </div>
     

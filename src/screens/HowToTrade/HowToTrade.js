@@ -20,7 +20,8 @@ function HowToTrade() {
       <div >
       {
         (!clicked) ? (<>
-        <HowToTrade_Header />
+        <div className="HowToTrade_Header">Learn How To Trade </div>
+        {/* <HowToTrade_Header /> */}
         <div className="card-list-container">
         <Card 
           id = "0"

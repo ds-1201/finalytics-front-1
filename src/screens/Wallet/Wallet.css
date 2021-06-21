@@ -1,16 +1,14 @@
+#top-container{
+    width: 100%;
+}
 .main-container {
-    
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     height: 85vh;
 }
-@media (max-width: 800px) {
-    .main-container {
-      flex-direction: column;
-    }
-  }
+
 .cards-container {
     width:65%;
     height:100%;
@@ -18,8 +16,8 @@
 
 .balance-card {
 position:relative;
-width:70%;
-height: 9vh;
+width:30vw;
+height:9vh;
 border-radius: 20px;
 margin:auto;
 padding:7vh;
@@ -32,12 +30,10 @@ margin-left: 7vw;
 .balance-card-header{
     display: flex;
     justify-content: space-between;
-    
     width:215px;
 
 }
 .notif-mark {
-
 width: 20px;
 height: 20px;
 background: linear-gradient(180deg, #FF40A5 0%, #E14CD1 100%);
@@ -112,7 +108,7 @@ flex-direction: row;
     width :30%;
     height:100%;
     overflow: hidden;
-    
+    margin-left: 10vw;
 }
 
 .image-container{
@@ -159,3 +155,60 @@ width:24px;
     margin-left: 50px;
     justify-content: space-around;
 }
+@media (max-width: 800px) {
+    .main-container {
+      flex-direction: column-reverse;
+      height:fit-content;
+    padding-bottom: 5vh;
+    }
+    .balance-card{
+        width: 40vw;;
+    }
+    .balance-card-header{
+        display: flex;
+        justify-content:flex-start;
+        width:60vw;
+    }
+    .text-2{
+        width: fit-content;
+    }
+
+    .bank-cards-container{
+        width:60vw;
+        margin-left:10vw;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        }
+        .visa-card{
+            width:60vw;
+            height:15vh;
+            overflow: hidden;
+        }
+        .platinum-card{
+            margin-top: 3vh;
+            width:60vw;
+            height:15vh;
+            overflow: hidden;
+        }
+        .sub-line{
+            margin-left:23px;
+            margin-top: 8px;
+            height: 3vh;
+            width:24px;
+            }
+        .sample-text{
+            display:flex;
+            width:35vw;
+            margin-left: 12vw;
+            
+        }
+        .button-container{
+            display: flex;
+            width:60%;
+            justify-content: space-between;
+            margin-left:10vw;
+            margin-top: 30px;
+        }
+  }

@@ -20,3 +20,11 @@
 .trendChart__percentRed {
   color: #ea4335;
 }
+@media  (max-width:700px){
+  .trendChart {
+    text-align: center;
+    color: white;
+    width: 60vw;
+    margin: 20px;
+  }
+}

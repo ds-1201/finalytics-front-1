@@ -59,6 +59,7 @@
   background: linear-gradient(136.67deg, #ff409a 8.34%, #c438ef 95.26%);
   box-shadow: 0px 4px 25px #ba1358;
   z-index:10000;
+  
 }
 
 .notification-number {
@@ -277,4 +278,15 @@ padding-inline-start: 20px
   color:#17153A;
   font-size: 12px;
 
+}
+@media  (max-width:700px){
+  .menu-container {
+    display: flex;
+    right: 0vw;
+    height: 30vw;
+    float: right;
+  }
+  .usercontainer2 {
+    width: fit-content;
+  }
 }

@@ -1,7 +1,7 @@
 /* Dashboard Header Styling */
-.header-container {
+.wallet-header-container {
     display: flex;
-    width: 77.6vw;
+    width: fit-content;
     height: 10vh;
     margin-top: 5vh;
     margin-left: 4.4vw;
@@ -23,53 +23,4 @@
     color: #FFFFFF;
 }
 
-/* How to Trade Header Styling */
-.how_to_trade {
-position: absolute;
-margin-top: 0.8vw;
-font-style: normal;
-font-weight: bold;
-font-size: 2.2em;
-line-height: 4vh;
-/* identical to box height */
-color: #FFFFFF;
-}
 
-/* Account Settings */
-.account_settings {
-    position: absolute;
-    left: 22vw;
-    top: 0vh;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.8em;
-    line-height: 7vh;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.9;   
-}
-.header-container_ac {
-    display: flex;
-    width: 100%;
-    margin-top: 5vh;
-    margin-left: 0vw;
-    padding-top: 0vh;
-}
-.trade_history{
-    height: 3vh;
-    margin-left: 7vw;
-    margin-top: 0vh;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2em;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.9;   
-}
-.header-container_th {
-    display: flex;
-    width: 100%;
-    margin-top: 5vh;
-    margin-left: 0vw;
-    padding-top: 0vh;
-}
