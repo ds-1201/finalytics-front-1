@@ -9,7 +9,7 @@ function SideBar(props) {
   const list = [
     "Dashboard",
     "Wallet",
-    "Trade",
+    "Trends",
     "Trade History",
     "How To Trade",
     "Account Settings",

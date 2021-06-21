@@ -10,7 +10,7 @@ function Button(props){
         switch(props.name) {
           case 'Dashboard': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faBars} />;
           case 'Wallet': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faWallet} />;
-          case 'Trade': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faExchangeAlt} />;
+          case 'Trends': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faExchangeAlt} />;
           case 'Trade History': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faChartLine} />;
           case 'How To Trade': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faGraduationCap} />;
           case 'Account Settings': return <FontAwesomeIcon className={props.id === props.active ? "icons selected":"icons"} icon={faUsersCog} />;

@@ -7,7 +7,7 @@ import {
 import Dashboard from "./screens/dashboard/Dashboard";
 import HowToTrade from "./screens/HowToTrade/HowToTrade";
 import SideBar from "./components/Sidebar/SideBar";
-import Trade from "./screens/Trade/Trade";
+import Trends from "./screens/Trends/Trends";
 import Account_Settings from "./screens/Account_Settings/Account_Settings";
 import SignUp from "./screens/Authentication/SignUp";
 import SignIn from "./screens/Authentication/SignIn";
@@ -36,7 +36,7 @@ function App() {
               component={Dashboard}
             />
             <Route path="/wallet" exact component={Wallet} />
-            <Route path="/trade" exact component={Trade} />
+            <Route path="/trends" exact component={Trends} />
             <Route path="/tradehistory" exact component={TradeHistory} />
             <Route path="/howtotrade" exact component={HowToTrade} />
             <Route path="/accountsettings" exact component={Account_Settings} />
