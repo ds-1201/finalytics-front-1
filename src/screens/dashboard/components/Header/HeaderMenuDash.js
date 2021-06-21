@@ -13,7 +13,7 @@ function HeaderMenu(props) {
 
   return (
     <div className="menu-container">
-      <div>
+      <div className="search-container">
         <SearchBar
           className="search-imported"
           update={props.update}

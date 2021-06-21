@@ -1,6 +1,5 @@
 .menu-container {
   display: flex;
-  position: absolute;
   right: 0vw;
   align-self: flex-end;
   height: 30vw;
@@ -10,7 +9,7 @@
   width: 2.9vw;
   height: 2.9vh;
   background: none;
-  position:fixed;
+  position:absolute;
   padding-top:13px;
 }
 .profile-img {
@@ -35,7 +34,14 @@
   z-index: 1000000;
 }
 
+.search-container{
+  position: relative;
+  left: 160px;
+}
+
 .notification-sign-container {
+  position: relative;
+  left: 325px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +56,8 @@
 }
 
 .usercontainer2 {
+  position: relative;
+  left: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +92,9 @@
   cursor: pointer;
 }
 .action{
-  position: fixed;
-  top:72px;
-  right: -4px;
+  position: relative;
+  top:30px;
+  right: 150px;
   z-index:1000;
 }
 .action .profile{
@@ -181,9 +189,9 @@
   font-size: 18px;
 }
 .Notification{
-  position: fixed;
-  top:90px;
-  right: 12.5vw;
+  position: relative;
+  top:50px;
+  left: 110px;;
   z-index:1000;
 }
 .Notification .profile2{
