@@ -114,7 +114,7 @@ function SignIn() {
 
                 if(error.response)
                 {
-                    window.alert("Invalid Otp")
+                    window.alert("Invalid OTP")
                     setStatus(0);
                    
                 }
@@ -131,7 +131,7 @@ function SignIn() {
                 {
                     status==200?
                 <div className="signin-container">
-                    <p className="signin-header">Enter Otp</p>
+                    <p className="signin-header">Enter OTP</p>
                     <OtpField value={otp} onChange={handleOtpChange}></OtpField>
                     <div onClick={handleOtpSubmit}><button className="signin-button" ><p className="signin-button-text">Submit</p></button></div>
                 </div>
