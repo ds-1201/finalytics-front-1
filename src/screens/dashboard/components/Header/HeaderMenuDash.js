@@ -5,6 +5,8 @@ import SearchBar from "../SearchBar/SearchBar";
 import { Link, useHistory } from "react-router-dom";
 
 function HeaderMenu(props) {
+  // const toggleMenu2 = document.querySelector(".menu2");
+  // const toggleMenu = document.querySelector(".menu");
   const [menuActive, setmenuActive] = useState(false);
   const [menu2Active, setmenu2Actve] = useState(false);
   let history = useHistory();
@@ -13,28 +15,26 @@ function HeaderMenu(props) {
   //   localStorage.removeItem("username");
   //   history.replace("/");
   // };
-  const menuDropdownHandler = (e) => {
-    const toggleMenu2 = document.querySelector(".menu2");
-    const toggleMenu = document.querySelector(".menu");
-    if (toggleMenu.classList.contains("active")) {
-      toggleMenu.classList.remove("active");
-      setmenuActive(false);
-    }
-    if (toggleMenu2.classList.contains("active")) {
-      toggleMenu2.classList.remove("active");
-      setmenu2Actve(false);
-    }
-  };
-  useEffect(() => {
-    if (menuActive || menu2Active) {
-      document.addEventListener("click", menuDropdownHandler);
-    }
+  // const menuDropdownHandler = (e) => {
+  //   if (toggleMenu.classList.contains("active")) {
+  //     toggleMenu.classList.remove("active");
+  //     setmenuActive(false);
+  //   }
+  //   if (toggleMenu2.classList.contains("active")) {
+  //     toggleMenu2.classList.remove("active");
+  //     setmenu2Actve(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   if (menuActive || menu2Active) {
+  //     document.addEventListener("click", menuDropdownHandler);
+  //   }
 
-    return () => {
-      console.log("Dashboard header event listner cleanup Clean up");
-      document.removeEventListener("click", menuDropdownHandler);
-    };
-  }, [menuActive, menu2Active]);
+  //   return () => {
+  //     console.log("Dashboard header event listner cleanup Clean up");
+  //     document.removeEventListener("click", menuDropdownHandler);
+  //   };
+  // }, [menuActive, menu2Active]);
 
   return (
     <div className="menu-container">
@@ -157,15 +157,15 @@ function HeaderMenu(props) {
   );
   function menuToggle() {
     const toggleMenu = document.querySelector(".menu");
-    toggleMenu.classList.add("active");
-    if (toggleMenu.classList.contains("active")) {
-      setmenuActive(true);
-    }
+    toggleMenu.classList.toggle("active");
+    // if (toggleMenu.classList.contains("active")) {
+    //   setmenuActive(true);
+    // }
   }
   function notifToggle() {
     const toggleMenu = document.querySelector(".menu2");
-    toggleMenu.classList.add("active");
-    setmenu2Actve(true);
+    toggleMenu.classList.toggle("active");
+    // setmenu2Actve(true);
   }
 }
 

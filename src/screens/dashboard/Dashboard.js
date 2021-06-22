@@ -30,10 +30,21 @@ function Dashboard() {
     }
   }, [clicked]);
 
+  const stockC =
+    typeof currentStock === "object" ? (
+      <Stocks currentStock={currentStock} />
+    ) : (
+      <h1>No stock Found :(</h1>
+    );
+  const cryptoC =
+    typeof currentCrypto === "object" ? (
+      <Crypto currentCrypto={currentCrypto} />
+    ) : (
+      <h1>No Cryptos Found :(</h1>
+    );
   const onClickHandler = (id) => {
     setClicked(id);
   };
-
   return (
     <div className="container" id="contscroll">
       <div>
@@ -59,11 +70,7 @@ function Dashboard() {
             onClick={onClickHandler}
           />
         </div>
-        {showStocks ? (
-          <Stocks currentStock={currentStock} />
-        ) : (
-          <Crypto currentCrypto={currentCrypto} />
-        )}
+        {showStocks ? stockC : cryptoC}
       </div>
     </div>
   );
