@@ -1,109 +1,109 @@
 .signin-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .signin-header {
-    width: 250px;
-    height: 58px;
-    /* margin-top: 130px; */
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 58px;
-    color: #FFFFFF;
-    text-align: center;
-
+  width: 250px;
+  height: 58px;
+  /* margin-top: 130px; */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .signin-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .text-field {
-    width: 40vw;
-    height: 50px;
-    color: black;
-    background: white;
-    border-radius: 12px;
+  width: 40vw;
+  height: 50px;
+  color: black;
+  background: white;
+  border-radius: 12px;
 }
 
 .tc-text {
-    color: #FFFFFF;
-    width: 238px;
-    height: 20px;
+  color: #ffffff;
+  width: 238px;
+  height: 20px;
 }
 
 .signin-button {
-    width: 128.25px;
-    height: 57px;
-    margin-top: 25px;
-    background: #14B5E5;
-    border-radius: 10px;
-    border: none;
+  width: 128.25px;
+  height: 57px;
+  margin-top: 25px;
+  background: #14b5e5;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .signin-button-text {
-    margin: auto;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 19.95px;
-    line-height: 36px;
-    font-size: 20px;
-    color: #FFFFFF;
+  margin: auto;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19.95px;
+  line-height: 36px;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .tc-text-container {
-    display: flex;
-    margin-top: 5px;
+  display: flex;
+  margin-top: 5px;
 }
 
-.footer-text{
-    width: 219px;
-    height: 24px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
+.footer-text {
+  width: 219px;
+  height: 24px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
 }
 .footer-text-link {
-    width: 77px;
-    height: 24px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
+  width: 77px;
+  height: 24px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
 }
-.password-reset-link{
-    width: 77px;
-    height: 24px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-    text-decoration: underline;
-    cursor: pointer;
+.password-reset-link {
+  width: 77px;
+  height: 24px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .MuiInputLabel-filled.MuiInputLabel-shrink {
-    transform: translate(12px, 2px) scale(1) !important ; 
+  transform: translate(12px, 2px) scale(1) !important ;
 }
 .MuiFormLabel-root {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
 /* .MuiInputLabel-formControl{
     top:-10px !important;
@@ -113,12 +113,11 @@
         width: 100%;
     }
 } */
-@media  (max-width:700px){
-    .text-field{
-        width: 90vw;
-    }
-    .signin-container {
-        
-        height: max-content;
-    }
+@media (max-width: 700px) {
+  .text-field {
+    width: 90vw;
+  }
+  .signin-container {
+    height: max-content;
+  }
 }

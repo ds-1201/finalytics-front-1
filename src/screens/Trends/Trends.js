@@ -32,9 +32,7 @@ function Trade() {
 
   useEffect(() => {
     const trendStocks = Data.filter((stock) => {
-      {
-        return stock;
-      }
+      return stock;
     });
 
     setSectorStocks(getRandom(trendStocks, 60));

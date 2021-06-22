@@ -34,7 +34,7 @@ function Dashboard() {
     typeof currentStock === "object" ? (
       <Stocks currentStock={currentStock} />
     ) : (
-      <h1>No stock Found :(</h1>
+      <h1 style={{ color: "white", margin: "auto" }}>No stock Found :(</h1>
     );
   const cryptoC =
     typeof currentCrypto === "object" ? (

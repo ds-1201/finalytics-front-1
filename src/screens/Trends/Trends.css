@@ -3,6 +3,11 @@
   margin-left: 50px;
   margin-right: 20px;
 }
+
+#trend {
+  color: white;
+  margin-left: 50px;
+}
 .trends-graphs {
   width: 60vw;
   margin-right: 40vw;
@@ -22,7 +27,7 @@
   border-radius: 0.125rem;
   background-color: gray;
 }
-@media  (max-width:700px){
+@media (max-width: 700px) {
   .trends-container {
     margin-left: 5vw;
   }
@@ -30,6 +35,6 @@
     width: 60vw;
     margin-right: 40vw;
     display: grid;
-    grid-template-columns: 60vw ;
+    grid-template-columns: 60vw;
   }
 }

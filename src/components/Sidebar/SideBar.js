@@ -34,17 +34,27 @@ function SideBar(props) {
             src="/FG LOGO_white.png"
             alt="Fintract-global-logo"
           />
-          {list.map((element, i) => {
-            return (
-              <Button
-                key={i}
-                id={i}
-                name={element}
-                active={clicked}
-                onClickHandler={onClickHandler}
-              />
-            );
-          })}
+          {localStorage.username === undefined ? (
+            <Button
+              key={0}
+              id={0}
+              name={"Dashboard"}
+              active={clicked}
+              onClickHandler={onClickHandler}
+            />
+          ) : (
+            list.map((element, i) => {
+              return (
+                <Button
+                  key={i}
+                  id={i}
+                  name={element}
+                  active={clicked}
+                  onClickHandler={onClickHandler}
+                />
+              );
+            })
+          )}
         </div>
         <div className="child-container">{props.children}</div>
       </div>
