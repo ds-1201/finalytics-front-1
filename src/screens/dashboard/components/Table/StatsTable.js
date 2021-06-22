@@ -46,7 +46,6 @@ const StatsTable = ({ currentStock }) => {
     axios
       .post(apiUrl.info, `companycode=${currentStock.Symbol}`)
       .then((res) => {
-        console.log(res);
         const data = res.data.info;
         setVolume(data.volume);
         setEps(data.trailingEps);

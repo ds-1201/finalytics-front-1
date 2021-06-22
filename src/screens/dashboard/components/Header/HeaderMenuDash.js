@@ -1,15 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HeaderMenu.css";
 import SearchBar from "../SearchBar/SearchBar";
 
 import { Link, useHistory } from "react-router-dom";
+
 function HeaderMenu(props) {
+  const [menuActive, setmenuActive] = useState(false);
+  const [menu2Active, setmenu2Actve] = useState(false);
   let history = useHistory();
-  const signout = (e) => {
-    localStorage.removeItem("id");
-    localStorage.removeItem("username");
-    history.replace("/");
+  // const signout = (e) => {
+  //   localStorage.removeItem("id");
+  //   localStorage.removeItem("username");
+  //   history.replace("/");
+  // };
+  const menuDropdownHandler = (e) => {
+    const toggleMenu2 = document.querySelector(".menu2");
+    const toggleMenu = document.querySelector(".menu");
+    if (toggleMenu.classList.contains("active")) {
+      toggleMenu.classList.remove("active");
+      setmenuActive(false);
+    }
+    if (toggleMenu2.classList.contains("active")) {
+      toggleMenu2.classList.remove("active");
+      setmenu2Actve(false);
+    }
   };
+  useEffect(() => {
+    if (menuActive || menu2Active) {
+      document.addEventListener("click", menuDropdownHandler);
+    }
+
+    return () => {
+      console.log("Dashboard header event listner cleanup Clean up");
+      document.removeEventListener("click", menuDropdownHandler);
+    };
+  }, [menuActive, menu2Active]);
 
   return (
     <div className="menu-container">
@@ -48,23 +73,23 @@ function HeaderMenu(props) {
         <div className="menu2">
           <ul>
             <li>
-              <img src="star.png"></img>
+              <img src="/star.png" alt=""></img>
               <a href="#"> Your order ID#1201 is pending </a>
             </li>
             <li>
-              <img src="star.png"></img>
+              <img src="/star.png" alt=""></img>
               <a href="#"> Your order ID#1201 is placed</a>
             </li>
             <li>
-              <img src="star.png"></img>
+              <img src="/star.png" alt=""></img>
               <a href="#"> order ID#1201 Cancelled </a>
             </li>
             <li>
-              <img src="star.png"></img>
+              <img src="/star.png" alt=""></img>
               <a href="#"> your document verification is pending </a>
             </li>
             <li>
-              <img src="star.png"></img>
+              <img src="/star.png" alt=""></img>
               <a href="#"> Alert: Tesla hit $2098.0 </a>
             </li>
           </ul>
@@ -74,20 +99,8 @@ function HeaderMenu(props) {
       <div className="usercontainer2" onClick={menuToggle}>
         <div className="profile-name-container">
           <div className="profile-pic">
-            <img className="profile-img" src="profile.jpg" />
+            <img className="profile-img" src="/profile.jpg" alt="" />
           </div>
-
-          {/* <h3 className="profile-name"><b>User</b> <span className="down-arrow">
-                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.44775 1.44794L4.49983 4.44794L1.5519 1.44794" stroke="#5B5A99" stroke-width="2" />
-                    </svg>
-                </span></h3> */}
-          {/*
-                    props.username?<span className="signup-text" onClick={signout}>Hi {props.username}</span> :
-                    <Link to="/signup"> <span className="signup-text">Sign Up/Login</span>
-                    </Link> 
-    
-                */}
 
           <h3 className="profile-name">
             <b>User</b>{" "}
@@ -118,23 +131,23 @@ function HeaderMenu(props) {
           </h3>
           <ul>
             <li>
-              <img src="profile.png"></img>
+              <img src="/profile.png" alt=""></img>
               <a href="#"> Profile </a>
             </li>
             <li>
-              <img src="orders.png"></img>
+              <img src="/orders.png" alt=""></img>
               <a href="#"> Your Orders </a>
             </li>
             <li>
-              <img src="settings.png"></img>
+              <img src="/settings.png" alt=""></img>
               <Link to={"/accountsettings"}> Settings </Link>
             </li>
             <li>
-              <img src="help.png"></img>
+              <img src="/help.png" alt=""></img>
               <a href="#">Help </a>
             </li>
             <li>
-              <img src="signout.png"></img>
+              <img src="/signout.png" alt=""></img>
               <a href="#"> Signout </a>
             </li>
           </ul>
@@ -144,11 +157,15 @@ function HeaderMenu(props) {
   );
   function menuToggle() {
     const toggleMenu = document.querySelector(".menu");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.add("active");
+    if (toggleMenu.classList.contains("active")) {
+      setmenuActive(true);
+    }
   }
   function notifToggle() {
     const toggleMenu = document.querySelector(".menu2");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.add("active");
+    setmenu2Actve(true);
   }
 }
 

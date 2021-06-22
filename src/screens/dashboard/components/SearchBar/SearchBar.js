@@ -14,7 +14,6 @@ function SearchBar(props) {
   const [value, setValue] = useState();
   const [inputValue, setInputValue] = useState("");
   useEffect(() => {
-    console.log(props.stocks);
     // let matches = Data.filter(stock => {
     //   const regex = new RegExp(`^${inputValue}`, 'gi');
     //   return stock.Name.match(regex)||stock.Symbol.match(regex);
