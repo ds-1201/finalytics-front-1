@@ -99,6 +99,15 @@
     text-decoration: underline;
     cursor: pointer;
 }
+.MuiInputLabel-filled.MuiInputLabel-shrink {
+    transform: translate(12px, 2px) scale(1) !important ; 
+}
+.MuiFormLabel-root {
+    font-weight: bold !important;
+}
+/* .MuiInputLabel-formControl{
+    top:-10px !important;
+} */
 /* @media  (max-width:1000px){
     .text-field{
         width: 100%;
