@@ -1,7 +1,7 @@
 import React from "react";
 import CryptoChartContainer from "./components/Chart/CryptoChartContainer";
 import CryptoTrends from "./components/Trends/CryptoTrends";
-import cryptos from "cryptocurrencies";
+// import { cryptodata } from "./../../cryptoData";
 
 const Crypto = ({ currentCrypto }) => {
   return (
@@ -10,7 +10,7 @@ const Crypto = ({ currentCrypto }) => {
         <CryptoChartContainer crypto={currentCrypto} />
       </div>
       <h2 style={{ color: "white", textAlign: "center" }}>
-        {cryptos[currentCrypto]}
+        ({currentCrypto.Symbol}) {currentCrypto.Name}
       </h2>
       <div>
         <CryptoTrends crypto={currentCrypto} />

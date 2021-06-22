@@ -17,7 +17,10 @@ function Dashboard() {
     Sector: "Health Care",
     Industry: "Other Pharmaceuticals",
   });
-  const [currentCrypto, setCurrentCrypto] = useState("BTC");
+  const [currentCrypto, setCurrentCrypto] = useState({
+    Symbol: "BTC",
+    Name: "Bitcoin",
+  });
 
   useEffect(() => {
     if (clicked === 1) {
