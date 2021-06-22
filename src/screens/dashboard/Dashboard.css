@@ -1,9 +1,9 @@
 .container {
-  /* background: radial-gradient(
+  background: radial-gradient(
     123.22% 129.67% at 100.89% -5.6%,
     #201d47 0%,
     #17153a 100%
-  ); */
+  );
 }
 
 .wallet-list-container {
@@ -47,10 +47,4 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 0.125rem;
   background-color: gray;
-}
-@media  (max-width:700px){
-  .wallet-list-container {
-    display: flex;
-    margin-left: 3vw;
-  }
 }

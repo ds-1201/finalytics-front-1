@@ -21,9 +21,3 @@
 #Odd1 {
   background-color: #1b1940;
 }
-@media  (max-width:700px){
-  #statstable {
-    width: 70vw;
-    margin: 5vw;
-  }
-}

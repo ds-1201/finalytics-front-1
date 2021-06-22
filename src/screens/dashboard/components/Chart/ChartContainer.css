@@ -76,25 +76,3 @@
   color: #fff;
   margin-left: 60px;
 }
-@media  (max-width:700px){
-  .chart-container-outer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vh;
-    /* align-items: center; */
-  }
-  .chart-container {
-    height: 40vh;
-    width:70vw;
-    
-  }
-  .interval-btn-list {
-    display: flex;
-    justify-content:center;
-  }
-  
-  .interval-btn {
-    width:8vw;
-  }
-  
-}

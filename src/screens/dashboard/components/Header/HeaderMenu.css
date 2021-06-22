@@ -34,14 +34,7 @@
   z-index: 1000000;
 }
 
-.search-container{
-  position: relative;
-  left: 160px;
-}
-
 .notification-sign-container {
-  position: relative;
-  left: 325px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,21 +49,16 @@
 }
 
 .usercontainer2 {
-  position: relative;
-  left: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9.5vw;
+  width: 12vw;
   height: 4.5vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
   border-radius: 14vw;
   opacity: 0.8;
   background: linear-gradient(136.67deg, #ff409a 8.34%, #c438ef 95.26%);
   box-shadow: 0px 4px 25px #ba1358;
   z-index:10000;
-  
 }
 
 .notification-number {
@@ -92,9 +80,9 @@
   cursor: pointer;
 }
 .action{
-  position: relative;
-  top:30px;
-  right: 150px;
+  position: fixed;
+  top:72px;
+  right: -4px;
   z-index:1000;
 }
 .action .profile{
@@ -189,9 +177,9 @@
   font-size: 18px;
 }
 .Notification{
-  position: relative;
-  top:50px;
-  left: 110px;;
+  position: fixed;
+  top:90px;
+  right: 12.5vw;
   z-index:1000;
 }
 .Notification .profile2{
@@ -289,15 +277,4 @@ padding-inline-start: 20px
   color:#17153A;
   font-size: 12px;
 
-}
-@media  (max-width:700px){
-  .menu-container {
-    display: flex;
-    right: 0vw;
-    height: 30vw;
-    float: right;
-  }
-  .usercontainer2 {
-    width: fit-content;
-  }
 }

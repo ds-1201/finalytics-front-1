@@ -20,7 +20,7 @@ export default function OtpField(props){
         color:"white",
         margin:"auto",
         borderColor:"white",
-        fontSize:"25px",
+        fontSize:"10px",
         borderWidth:"2px",
         fontWeight:"600",
     }

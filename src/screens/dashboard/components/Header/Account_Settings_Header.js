@@ -1,7 +1,7 @@
 import React from "react";
 // using same css for all the header styling
 import "./Header.css";
-import HeaderMenu from "./HeaderMenu";
+
 
 function Account_Settings() {
   return (

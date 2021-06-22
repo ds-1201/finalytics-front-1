@@ -35,11 +35,9 @@ function ChartContainer(props) {
         const data = response.data.info;
         setPrevClose(data.previousClose);
         setCurrentValue(data.regularMarketPrice);
-        return response;
       })
       .catch((error) => {
         console.log(error);
-        return error;
       });
   }, [props.currentStock]);
   const getGraphData = () => {
@@ -50,16 +48,15 @@ function ChartContainer(props) {
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
       )
       .then((res) => {
+        console.log(res);
         for (const prop in res.data.TimeStamp) {
           setDuration(res.data.TimeStamp[prop]);
         }
         setStocks(res.data.Close);
         setIsLoading(false);
-        return res;
       })
       .catch((err) => {
         console.log(err);
-        return err;
       });
   };
 

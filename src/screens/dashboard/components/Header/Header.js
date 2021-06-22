@@ -1,9 +1,10 @@
 import React from "react";
-// import Dashboard from "../../Dashboard";
+import Dashboard from "../../Dashboard";
 import "./Header.css";
 import HeaderMenu from "./HeaderMenuDash";
 
 function Header(props) {
+  console.log(props.stocks);
   return (
     <div className="header-container">
       <div className="title-text-container">
@@ -12,8 +13,8 @@ function Header(props) {
       <div>
         <HeaderMenu
           update={props.update}
-          username={props.username}
           stocks={props.stocks}
+          // username={props.username}
         />
       </div>
     </div>

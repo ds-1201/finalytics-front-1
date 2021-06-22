@@ -114,7 +114,7 @@ function SignIn() {
 
                 if(error.response)
                 {
-                    window.alert("Invalid OTP")
+                    window.alert("Invalid Otp")
                     setStatus(0);
                    
                 }
@@ -131,7 +131,7 @@ function SignIn() {
                 {
                     status==200?
                 <div className="signin-container">
-                    <p className="signin-header">Enter OTP</p>
+                    <p className="signin-header">Enter Otp</p>
                     <OtpField value={otp} onChange={handleOtpChange}></OtpField>
                     <div onClick={handleOtpSubmit}><button className="signin-button" ><p className="signin-button-text">Submit</p></button></div>
                 </div>
@@ -146,7 +146,7 @@ function SignIn() {
                         className="text-field" 
                         id="outlined-basic" 
                         label="Email"
-                        variant="filled"
+                        variant="outlined"
                         margin= "normal" 
                         position= "start"
                         name="email"
@@ -160,7 +160,7 @@ function SignIn() {
                 <TextField  InputProps={{
                             startAdornment:   <FontAwesomeIcon icon={faLock} />
                           }}
-                className="text-field" id="outlined-basic" label="Password" variant="filled" margin= "normal" type="password" 
+                className="text-field" id="outlined-basic" label="Password" variant="outlined" margin= "normal" type="password" 
                 name="password" value={credentials.password} onChange={handleInputChange}
                 />
                 {

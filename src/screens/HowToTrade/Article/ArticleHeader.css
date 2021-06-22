@@ -37,30 +37,3 @@
     color: #FFFFFF;
     text-align: center;
 }
-@media  (max-width:700px){
-    .title {
-        width: 35vw;
-        height: 14vh;
-        margin-left: 2.6vw;
-        font-family: DM Serif Display;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 8vw;
-        line-height: 3.8vh;
-        color: #FFFFFF;
-        text-align: center;
-    }
-    .subtitle {
-        position: relative;
-        top: 2vh;
-        width: 20vw;
-        height: 10px;
-        margin-left: 10vw;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 0.9em;
-        line-height: 2.2vh;
-        color: #FFFFFF;
-        text-align: center;
-    }
-}

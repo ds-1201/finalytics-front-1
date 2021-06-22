@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { Data } from "../../../../data";
-import { cryptodata } from "../../../../cryptoData";
+import cc from "cryptocurrencies";
 
 import "./SearchBar.css";
 
@@ -14,27 +14,20 @@ function SearchBar(props) {
   const [value, setValue] = useState();
   const [inputValue, setInputValue] = useState("");
   useEffect(() => {
-    // let matches = Data.filter(stock => {
-    //   const regex = new RegExp(`^${inputValue}`, 'gi');
-    //   return stock.Name.match(regex)||stock.Symbol.match(regex);
-    // })
+    console.log(props.stocks);
     if (props.stocks) {
       setStocks(
-        Data.filter((stock) => {
-          const regex = new RegExp(`^${inputValue}`, "gi");
-          return stock.Symbol.match(regex) || stock.Name.match(regex);
-        })
+        Data.filter((stock) =>
+          stock.Name.toLowerCase().startsWith(inputValue.toLowerCase())
+        )
       );
-      // Data.filter((stock) =>
-      //     stock.Name.toLowerCase().startsWith(inputValue.toLowerCase())
-      //   )
     } else {
       setCryptocurrencies(
-        cryptodata.filter((crypto) => {
-          const regex = new RegExp(`${inputValue}`, "gi");
-
-          return crypto.Symbol.match(regex) || String(crypto.Name).match(regex);
-        })
+        cc
+          .symbols()
+          .filter((crypto) =>
+            crypto.toLowerCase().startsWith(inputValue.toLowerCase())
+          )
       );
     }
   }, [inputValue, props.stocks]);
@@ -68,7 +61,9 @@ function SearchBar(props) {
                   ? stocks.map((option) => option)
                   : cryptocurrencies.map((option) => option)
               } // stocks.map((option) => option)
-              getOptionLabel={(option) => `${option.Symbol} - ${option.Name}`} //
+              getOptionLabel={
+                props.stocks ? (option) => option.Name : (option) => option
+              } //
               onChange={(event, newValue) => handleChange(event, newValue)}
               inputValue={inputValue}
               onInputChange={(event, newInputValue) =>

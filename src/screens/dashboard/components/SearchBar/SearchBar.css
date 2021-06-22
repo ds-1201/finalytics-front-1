@@ -1,43 +1,36 @@
 .search-container {
-  display: flex;
-  height: 20px;
-  border-radius: 50px;
+    display:flex;
+    height: 20px;
+    border-radius: 50px;
 }
 
 .search-input {
-  position: relative;
-  height: 20px;
-  color: #ffffff;
-  outline: none;
-  background: none;
+    position: relative;
+    height: 20px;
+    color: #FFFFFF;
+    outline: none;
+    background: none;
 }
 
 #stock-search {
-  color: #ffffff;
-  background: linear-gradient(90.67deg, #7222e2 8.34%, #c438ef 95.26%);
-  fill-opacity: 0.2;
-  border-radius: 50px;
+    color: #FFFFFF;
+    background: linear-gradient(90.67deg, #7222e2 8.34%, #C438EF 95.26%);
+    fill-opacity: 0.2;
+    border-radius: 50px;
 }
 
-.search {
-  border-color: #fff !important;
+.search{
+    border-color: #fff !important;
 }
 
-.search-Icon {
-  height: 37px;
-  z-index: 100000;
+.search-Icon {                                  
+    height: 37px; 
+    z-index:100000;
 }
-.PrivateNotchedOutline-root-22 {
-  border: 0px !important;
-  border-radius: 50px !important;
+.PrivateNotchedOutline-root-22{
+    border:0px !important;
+    border-radius: 50px !important;
 }
-#stock-search-label {
-  color: #fff !important;
-}
-
-@media  (max-width:700px){
-    .search-container {
-        /* margin-right: 50vw; */
-        /* width: 20vw; */
-    }
+#stock-search-label{
+    color: #fff !important;
 }

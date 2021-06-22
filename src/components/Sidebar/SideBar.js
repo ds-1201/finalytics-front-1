@@ -9,7 +9,7 @@ function SideBar(props) {
   const list = [
     "Dashboard",
     "Wallet",
-    "Trends",
+    "Trade",
     "Trade History",
     "How To Trade",
     "Account Settings",
@@ -20,6 +20,7 @@ function SideBar(props) {
     history.push("/");
   }, []);
 
+
   const onClickHandler = (id) => {
     setClicked(id);
     var address = list[id].toLowerCase().split(" ").join("");
@@ -29,11 +30,7 @@ function SideBar(props) {
     <>
       <div className="container">
         <div className="sidebar-container">
-          <img
-            className="img"
-            src="/FG LOGO_white.png"
-            alt="Fintract-global-logo"
-          />
+          <img className="img" src="FG LOGO_white.png" />
           {list.map((element, i) => {
             return (
               <Button
@@ -45,6 +42,7 @@ function SideBar(props) {
               />
             );
           })}
+
         </div>
         <div className="child-container">{props.children}</div>
       </div>

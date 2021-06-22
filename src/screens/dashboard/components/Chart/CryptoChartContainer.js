@@ -29,7 +29,6 @@ const CryptoChartContainer = (props) => {
         console.log(err);
         setError(true);
         setIsLoading(false);
-        return err;
       });
   }, []);
 

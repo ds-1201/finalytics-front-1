@@ -90,7 +90,7 @@ function SignUp() {
                         id="outlined-basic" 
                         placeholder="Username" 
                         label="Username"
-                        variant="filled"
+                        variant="outlined"
                         margin= "normal" 
                     
                         name="username"
@@ -105,7 +105,7 @@ function SignUp() {
                             startAdornment:   <FontAwesomeIcon icon={faEnvelope} />
                           }}
                     label="Email"
-                    className="text-field-up" id="outlined-basic" placeholder="Email" variant="filled" margin= "normal" 
+                    className="text-field-up" id="outlined-basic" placeholder="Email" variant="outlined" margin= "normal" 
                     onChange={handleInputChange} name="email" value={userDetails.email}/>
                      {
                     errorMessages.email&&<SubLine size="14px">{errorMessages.email}</SubLine>
@@ -122,7 +122,7 @@ function SignUp() {
                             startAdornment:   <FontAwesomeIcon icon={faLock} />
                           }}
                           label="Password"
-                    className="text-field-up" id="outlined-basic" type="password" placeholder="Password" variant="filled" margin= "normal" 
+                    className="text-field-up" id="outlined-basic" type="password" placeholder="Password" variant="outlined" margin= "normal" 
                     onChange={handleInputChange} name="password" value={userDetails.password} type="password"/>
                      {
                     errorMessages.password&&<SubLine size="14px">{errorMessages.password}</SubLine>
@@ -131,7 +131,7 @@ function SignUp() {
                             startAdornment:   <FontAwesomeIcon icon={faLock} />
                           }}
                         label="Confirm Password"
-                    className="text-field-up" id="outlined-basic" type="password" placeholder="Confirm Password" variant="filled" margin= "normal" 
+                    className="text-field-up" id="outlined-basic" type="password" placeholder="Confirm Password" variant="outlined" margin= "normal" 
                     onChange={handleInputChange} name="cpassword" value={userDetails.cpassword} type="password"/>
                      {
                     errorMessages.password2&&<SubLine size="14px">{errorMessages.password2}</SubLine>
