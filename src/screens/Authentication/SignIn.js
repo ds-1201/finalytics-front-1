@@ -146,7 +146,7 @@ function SignIn() {
                         className="text-field" 
                         id="outlined-basic" 
                         label="Email"
-                        variant="outlined"
+                        variant="filled"
                         margin= "normal" 
                         position= "start"
                         name="email"
@@ -160,7 +160,7 @@ function SignIn() {
                 <TextField  InputProps={{
                             startAdornment:   <FontAwesomeIcon icon={faLock} />
                           }}
-                className="text-field" id="outlined-basic" label="Password" variant="outlined" margin= "normal" type="password" 
+                className="text-field" id="outlined-basic" label="Password" variant="filled" margin= "normal" type="password" 
                 name="password" value={credentials.password} onChange={handleInputChange}
                 />
                 {
