@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./CryptoChartContainer.css";
 import axios from "axios";
-import { apiUrl } from "./../Api/api";
 import Chart from "./Chart";
 
 const CryptoChartContainer = (props) => {
@@ -14,7 +13,12 @@ const CryptoChartContainer = (props) => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .post(apiUrl.crypto, `crypto=btc`)
+      .post(process.env.REACT_APP_URL_Crypto_GRAPH, `crypto=btc`, {
+        auth: {
+          username: process.env.REACT_APP_URL_USERNAME,
+          password: process.env.REACT_APP_URL_PASSWORD,
+        },
+      })
       .then((res) => {
         const data = res.data.Crypto_data;
 

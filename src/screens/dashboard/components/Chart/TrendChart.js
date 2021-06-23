@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./TrendChart.css";
 import axios from "axios";
-import { apiUrl } from "./../Api/api";
 import Chart from "./Chart";
 
 const TrendChart = (props) => {
@@ -18,7 +17,16 @@ const TrendChart = (props) => {
 
   useEffect(() => {
     axios
-      .post(apiUrl.info, `companycode=${props.currentStock.Symbol}`)
+      .post(
+        process.env.REACT_APP_URL_INFO,
+        `companycode=${props.currentStock.Symbol}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
+      )
       .then((response) => {
         const data = response.data.info;
         setPrevClose(data.previousClose);
@@ -33,8 +41,14 @@ const TrendChart = (props) => {
     setIsLoading(true);
     axios
       .post(
-        apiUrl.stocks,
-        `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`
+        process.env.REACT_APP_URL_STOCKS_GRAPH,
+        `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
       )
       .then((res) => {
         for (const prop in res.data.TimeStamp) {
