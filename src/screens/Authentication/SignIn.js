@@ -50,7 +50,13 @@ function SignIn() {
     axios
       .post(
         "https://finalyticsad.fintract.co.uk/auth/login/",
-        `email=${credentials.email}&password=${credentials.password}`
+        `email=${credentials.email}&password=${credentials.password}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
       )
       .then((res) => {
         setStatus(res.status);
@@ -69,7 +75,13 @@ function SignIn() {
     axios
       .post(
         "https://finalyticsad.fintract.co.uk/auth/refresh-token/",
-        `email=${credentials.email}`
+        `email=${credentials.email}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
       )
       .then((res) => {
         setStatus(1);
@@ -89,7 +101,13 @@ function SignIn() {
       axios
         .post(
           "https://finalyticsad.fintract.co.uk/auth/reset-password/",
-          `email=${credentials.email}`
+          `email=${credentials.email}`,
+          {
+            auth: {
+              username: process.env.REACT_APP_URL_USERNAME,
+              password: process.env.REACT_APP_URL_PASSWORD,
+            },
+          }
         )
         .then((res) => {
           setResetPasswordStatus(res.status);
@@ -113,7 +131,13 @@ function SignIn() {
     axios
       .post(
         `https://finalyticsad.fintract.co.uk/auth/login/${userId}/`,
-        `otp=${otp}`
+        `otp=${otp}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
       )
       .then((res) => {
         console.log(res.data);
