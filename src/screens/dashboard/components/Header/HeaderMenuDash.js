@@ -43,14 +43,7 @@ function HeaderMenu(props) {
           Signup/Login
         </div>
       ) : (
-        <div
-          style={{
-            width: "20vw",
-            display: "flex",
-            justifyContent: "space-around",
-            marginRight: "2vw",
-          }}
-        >
+        <React.Fragment>
           <div className="notification-sign-container" onClick={notifToggle}>
             <svg
               width="10"
@@ -97,14 +90,27 @@ function HeaderMenu(props) {
             </div>
           </div>
 
-          <div className="usercontainer2" onClick={menuToggle}>
+          <div className="usercontainer3" onClick={menuToggle}>
             <div className="profile-name-container">
               <div className="profile-pic">
                 <img className="profile-img" src="/profile.jpg" />
               </div>
+
+              {/* <h3 className="profile-name"><b>User</b> <span className="down-arrow">
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.44775 1.44794L4.49983 4.44794L1.5519 1.44794" stroke="#5B5A99" stroke-width="2" />
+                    </svg>
+                </span></h3> */}
+              {/*
+                    props.username?<span className="signup-text" onClick={signout}>Hi {props.username}</span> :
+                    <Link to="/signup"> <span className="signup-text">Sign Up/Login</span>
+                    </Link> 
+    
+                */}
+
               <h3 className="profile-name">
                 <b>User</b>{" "}
-                <span className="down-arrow" style={{ marginLeft: "1.5px" }}>
+                <span className="down-arrow">
                   <svg
                     width="9"
                     height="6"
@@ -125,10 +131,11 @@ function HeaderMenu(props) {
           <div className="action">
             <div className="menu">
               <h3>
-                Hi! {localStorage.username}
+                {localStorage.username}
                 <br></br>
                 <span>Balance: 24,539$</span>
               </h3>
+
               <ul>
                 <li>
                   <img src="/profile.png"></img>
@@ -153,7 +160,7 @@ function HeaderMenu(props) {
               </ul>
             </div>
           </div>
-        </div>
+        </React.Fragment>
       )}
     </div>
   );

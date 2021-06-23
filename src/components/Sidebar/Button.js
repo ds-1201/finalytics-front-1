@@ -8,6 +8,7 @@ import {
   faChartLine,
   faUsersCog,
   faGraduationCap,
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -46,7 +47,7 @@ function Button(props) {
         return (
           <FontAwesomeIcon
             className={props.id === props.active ? "icons selected" : "icons"}
-            icon={faGraduationCap}
+            icon={faInfoCircle}
           />
         );
       case "Account Settings":
