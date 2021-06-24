@@ -127,6 +127,19 @@ function HeaderMenu(props) {
               <div className="profile-pic">
                 <img className="profile-img" src="/default-profile.jpeg" />
               </div>
+
+              {/* <h3 className="profile-name"><b>User</b> <span className="down-arrow">
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.44775 1.44794L4.49983 4.44794L1.5519 1.44794" stroke="#5B5A99" stroke-width="2" />
+                    </svg>
+                </span></h3> */}
+              {/*
+                    props.username?<span className="signup-text" onClick={signout}>Hi {props.username}</span> :
+                    <Link to="/signup"> <span className="signup-text">Sign Up/Login</span>
+                    </Link> 
+    
+                */}
+
               <h3 className="profile-name">
                 <b>User</b>{" "}
                 <span className="down-arrow">

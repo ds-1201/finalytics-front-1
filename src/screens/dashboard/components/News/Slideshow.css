@@ -1,0 +1,134 @@
+
+
+.slideshow {
+    margin: 5vh auto;
+    overflow: hidden;
+    width: 50vw;
+  }
+  
+  .slideshowSlider {
+    white-space:nowrap;
+    transition: ease 1000ms;
+  }
+  
+  /* .slide {
+    display: inline-block;
+    background-color: yellowgreen;
+    height: 40vh;
+    width: 100%;
+    border-radius: 40px;
+  } */
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+    margin-bottom: 8vh;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(236, 212, 212);
+    margin: 15px 7px 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.3;
+  
+  }
+  
+  .slideshowDot.active {
+    background-color: rgb(206, 114, 114);;
+    
+  }
+  
+  a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(236, 180, 59);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  
+  .card1{ 
+      display: inline-block;
+      background-image: linear-gradient(to left top, #d08ae4, #b47bd9, #976dcd, #7860c1, #5653b4, #4059b3, #285db1, #0061ac, #0074ac, #0084a4, #3f919c, #6a9c98);
+      height: 40vh;
+      width: 100%;
+      border-radius: 40px; 
+  
+  }
+  .card2{
+      
+      display: inline-block;
+      background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+      height: 40vh;
+      width: 100%;
+      border-radius: 40px; 
+  }
+  .card3{
+      
+      display: inline-block;
+      background-image: linear-gradient(to right bottom, #e4b78a, #cfb376, #b4b067, #94ad5f, #6da95f, #47a879, #1da492, #009ea4, #0195b7, #4989bd, #777ab4, #966a9c);
+      height: 40vh;
+      width: 100%;
+      border-radius: 40px; 
+  }
+  .card4{
+      
+      display: inline-block;
+      background: #1D4350;  
+      background: -webkit-linear-gradient(to right, #A43931, #1D4350);  
+      background: linear-gradient(to right, #A43931, #1D4350); 
+      height: 40vh;
+      width: 100%;
+      border-radius: 40px; 
+  }
+  .card5{
+      
+      display: inline-block;
+      background: #2C3E50;  
+      background: -webkit-linear-gradient(to right, #FD746C, #2C3E50); 
+      background: linear-gradient(to right, #FD746C, #2C3E50); 
+      height: 40vh;
+      width: 100%;
+      border-radius: 40px; 
+  }
+  
+   .innerdata{
+       margin: 2vw;
+       display: flex;
+       flex-direction: row;
+      white-space:initial;
+    transition: ease 1000ms;
+    color: red;
+  }
+  .myimage{
+      width: 10vw;
+      height: 30vh;
+      border-radius: 10%;
+      background-color: yellowgreen;
+  }
+  .news1{ 
+      margin-left: 5vw;
+      width: 30vw;
+      overflow: visible;
+  } 

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "gilroybold";
+  src: url(../../../Authentication/assets/CSS-files/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: "gilroylight";
+  src: url(../../../Authentication/assets/CSS-files/Gilroy-Light.otf);
+}
+
 .option-button {
   display: flex;
   justify-content: center;
@@ -17,6 +26,7 @@
   font-size: 1.9em;
   font-weight: bold;
   color: #ffffff;
+  font-family: gilroybold;
 }
 
 .selected {
