@@ -42,6 +42,8 @@ const StatsTable = ({ currentStock }) => {
   const [open, setOpen] = useState("");
 
   useEffect(() => {
+    let mount = true;
+    let source = axios.CancelToken.source();
     axios
       .post(
         process.env.REACT_APP_URL_INFO,
@@ -51,31 +53,38 @@ const StatsTable = ({ currentStock }) => {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((res) => {
-        const data = res.data.info;
-        setVolume(data.volume);
-        setEps(data.trailingEps);
-        setMarketCap(data.marketCap);
-        setMarketPrice(data.regularMarketPrice);
-        setDividendYeild((data.dividendYield * 100).toFixed(2));
-        setPrevClose(data.previousClose);
-        setOpen(data.open);
-        setDayRange({
-          minimum: data.dayLow.toFixed(2),
-          maximum: data.dayHigh.toFixed(2),
-        });
-        setYearRange({
-          minimum: data.fiftyTwoWeekLow.toFixed(2),
-          maximum: data.fiftyTwoWeekHigh.toFixed(2),
-        });
-        return res;
+        if (mount) {
+          const data = res.data.info;
+          setVolume(data.volume);
+          setEps(data.trailingEps);
+          setMarketCap(data.marketCap);
+          setMarketPrice(data.regularMarketPrice);
+          setDividendYeild((data.dividendYield * 100).toFixed(2));
+          setPrevClose(data.previousClose);
+          setOpen(data.open);
+          setDayRange({
+            minimum: data.dayLow.toFixed(2),
+            maximum: data.dayHigh.toFixed(2),
+          });
+          setYearRange({
+            minimum: data.fiftyTwoWeekLow.toFixed(2),
+            maximum: data.fiftyTwoWeekHigh.toFixed(2),
+          });
+          return res;
+        }
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
         return err;
       });
+    return () => {
+      mount = false;
+      source.cancel("Component unmount");
+    };
   }, [currentStock]);
 
   const TableCell = withStyles({

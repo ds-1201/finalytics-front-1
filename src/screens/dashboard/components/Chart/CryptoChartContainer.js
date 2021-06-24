@@ -11,6 +11,8 @@ const CryptoChartContainer = (props) => {
   const [currentValue, setCurrentValue] = useState("");
 
   useEffect(() => {
+    let mount = true;
+    let source = axios.CancelToken.source();
     setIsLoading(true);
     console.log(props.crypto.Symbol.toLowerCase());
     axios
@@ -22,18 +24,17 @@ const CryptoChartContainer = (props) => {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((res) => {
-        const data = res.data.Crypto_data;
-
-        setDuration(data.Date.reverse());
-        setValues(data.Close.reverse());
-        setIsLoading(false);
-        setError(false);
-        return () => {
-          return res;
-        };
+        if (mount) {
+          const data = res.data.Crypto_data;
+          setDuration(data.Date.reverse());
+          setValues(data.Close.reverse());
+          setIsLoading(false);
+          setError(false);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -41,6 +42,10 @@ const CryptoChartContainer = (props) => {
         setIsLoading(false);
         return err;
       });
+    return () => {
+      mount = false;
+      source.cancel("Component unmount");
+    };
   }, [props.crypto]);
 
   return (

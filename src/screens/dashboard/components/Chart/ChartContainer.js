@@ -28,6 +28,8 @@ function ChartContainer(props) {
   };
 
   useEffect(() => {
+    let mount = true;
+    const source = axios.CancelToken.source();
     axios
       .post(
         process.env.REACT_APP_URL_INFO,
@@ -37,21 +39,31 @@ function ChartContainer(props) {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((response) => {
-        const data = response.data.info;
-        setPrevClose(data.previousClose);
-        setCurrentValue(data.regularMarketPrice);
-        return response;
+        if (mount) {
+          const data = response.data.info;
+          setPrevClose(data.previousClose);
+          setCurrentValue(data.regularMarketPrice);
+          return response;
+        }
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
         return error;
       });
+    return () => {
+      mount = false;
+      source.cancel("Component got unmounted");
+    };
   }, [props.currentStock]);
-  const getGraphData = () => {
+
+  useEffect(() => {
     setIsLoading(true);
+    let mount = true;
+    const source = axios.CancelToken.source();
     axios
       .post(
         process.env.REACT_APP_URL_STOCKS_GRAPH,
@@ -61,24 +73,27 @@ function ChartContainer(props) {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((res) => {
-        for (const prop in res.data.TimeStamp) {
-          setDuration(res.data.TimeStamp[prop]);
+        if (mount) {
+          for (const prop in res.data.TimeStamp) {
+            setDuration(res.data.TimeStamp[prop]);
+          }
+          setStocks(res.data.Close);
+          setIsLoading(false);
+          return res;
         }
-        setStocks(res.data.Close);
-        setIsLoading(false);
-        return res;
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
         return err;
       });
-  };
-
-  useEffect(() => {
-    getGraphData();
+    return () => {
+      mount = false;
+      source.cancel("Component got unmounted");
+    };
   }, [props.currentStock, range, interval]);
 
   useEffect(() => {

@@ -8,14 +8,14 @@ const TrendChart = (props) => {
   const [showStocks, setShowstocks] = useState(false);
   const [stocks, setStocks] = useState([]);
   const [duration, setDuration] = useState([]);
-  const [range] = useState("1d");
-  const [interval] = useState("1m");
   const [currentValue, setCurrentValue] = useState("");
   // const [startValue, setStartValue] = useState("");
   const [changePercent, setChangePercent] = useState("");
   const [prevClose, setPrevClose] = useState("");
 
   useEffect(() => {
+    let mount = true;
+    const source = axios.CancelToken.source();
     axios
       .post(
         process.env.REACT_APP_URL_INFO,
@@ -25,44 +25,66 @@ const TrendChart = (props) => {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((response) => {
-        const data = response.data.info;
-        setPrevClose(data.previousClose);
-        setCurrentValue(data.regularMarketPrice);
+        if (mount) {
+          const data = response.data.info;
+          setPrevClose(data.previousClose);
+          setCurrentValue(data.regularMarketPrice);
+          return response;
+        }
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
+        return error;
       });
+    return () => {
+      mount = false;
+      source.cancel();
+    };
   }, [props.currentStock]);
 
   useEffect(() => {
     setIsLoading(true);
+    let mount = true;
+    const source = axios.CancelToken.source();
     axios
       .post(
         process.env.REACT_APP_URL_STOCKS_GRAPH,
-        `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`,
+        `companycode=${
+          props.currentStock.Symbol
+        }&period=${"1d"}&interval=${"1m"}`,
         {
           auth: {
             username: process.env.REACT_APP_URL_USERNAME,
             password: process.env.REACT_APP_URL_PASSWORD,
           },
+          cancelToken: source.token,
         }
       )
       .then((res) => {
-        for (const prop in res.data.TimeStamp) {
-          setDuration(res.data.TimeStamp[prop]);
+        if (mount) {
+          setShowstocks(true);
+          for (const prop in res.data.TimeStamp) {
+            setDuration(res.data.TimeStamp[prop]);
+          }
+          setStocks(res.data.Close);
+          setIsLoading(false);
+          return res;
         }
-        setStocks(res.data.Close);
-        setShowstocks(true);
-        setIsLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err.message);
         setIsLoading(false);
+        return err;
       });
-  }, [props.currentStock, range, interval]);
+    return () => {
+      mount = false;
+      source.cancel();
+    };
+  }, [props.currentStock]);
 
   useEffect(() => {
     const num = ((+currentValue - +prevClose) / +prevClose) * 100;
@@ -99,7 +121,7 @@ const TrendChart = (props) => {
         </React.Fragment>
       )}
       {!isLoading && !showStocks && (
-        <p>
+        <p style={{ display: "none" }}>
           Data not found Server Error {props.currentStock.Name}{" "}
           {props.currentStock.Symbol}
         </p>
