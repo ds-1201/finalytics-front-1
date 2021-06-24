@@ -3,8 +3,6 @@ import "./SectorTrends.css";
 import { Data } from "./../../../../data";
 import TrendChart from "./../Chart/TrendChart";
 import StatsTable from "./../Table/StatsTable";
-import axios from "axios";
-import { apiUrl } from "./../Api/api";
 
 function getRandom(arr, n) {
   var result = new Array(n),

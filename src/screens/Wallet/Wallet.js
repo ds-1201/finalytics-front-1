@@ -83,7 +83,7 @@ function Wallet(props) {
           <div className="user-container">
             <div className="image-container">
               <img
-                src={process.env.PUBLIC_URL + "/profile.jpg"}
+                src={process.env.PUBLIC_URL + "/default-profile.jpeg"}
                 alt="avatar"
                 className="user-image"
               />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Stats.css";
 import axios from "axios";
-import { apiUrl } from "./../Api/api";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -44,7 +43,16 @@ const StatsTable = ({ currentStock }) => {
 
   useEffect(() => {
     axios
-      .post(apiUrl.info, `companycode=${currentStock.Symbol}`)
+      .post(
+        process.env.REACT_APP_URL_INFO,
+        `companycode=${currentStock.Symbol}`,
+        {
+          auth: {
+            username: process.env.REACT_APP_URL_USERNAME,
+            password: process.env.REACT_APP_URL_PASSWORD,
+          },
+        }
+      )
       .then((res) => {
         const data = res.data.info;
         setVolume(data.volume);

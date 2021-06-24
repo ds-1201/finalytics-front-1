@@ -1,104 +1,106 @@
 .signup-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .signup-header {
-    width: 184px;
-    height: 10px;
-    margin-top: 70px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 10px;
-    color: #FFFFFF;
-
+  width: 184px;
+  height: 10px;
+  margin-top: 70px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 10px;
+  color: #ffffff;
 }
 
 .signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .text-field-up {
-    width: 35vw;
-    height: 50px;
-    background:white;
+  width: 35vw;
+  height: 50px;
+  background: white;
 
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
 .tc-text {
-    color: #FFFFFF;
-    width: 238px;
-    height: 10px;
+  color: #ffffff;
+  width: 238px;
+  height: 10px;
+}
+
+.tc-text u {
+  cursor: pointer;
 }
 
 .signup-button {
-    width: 128.25px;
-    height: 47px;
-    margin-top: 0px;
-    background: #14B5E5;
-    border-radius: 10px;
-    border: none;
+  width: 128.25px;
+  height: 47px;
+  margin-top: 0px;
+  background: #14b5e5;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .signup-button-text {
-    margin: auto;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 19.95px;
-    line-height: 36px;
-    font-size: 20px;
-    color: #FFFFFF;
+  margin: auto;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19.95px;
+  line-height: 36px;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .tc-text-container {
-    display: flex;
-    margin-top: 5px;
+  display: flex;
+  margin-top: 5px;
 }
 
-.footer-text{
+.footer-text {
+  width: 350px !important;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 15px;
+  text-align: center;
 
-    width: 350px !important;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 15px;
-    text-align: center;
-
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer-text-link {
-    width: 77px;
-    height: 24px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
+  width: 77px;
+  height: 24px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
 
-    color: #FFFFFF;
-
+  color: #ffffff;
 }
 /* @media  (max-width:1000px){
     .text-field-up{
         width: 100%;
     }
 } */
-@media  (max-width:700px){
-    .text-field-up{
-        width: 90vw;
-    }
-    .signup-container {
-        height: fit-content;
-    }
+@media (max-width: 700px) {
+  .text-field-up {
+    width: 90vw;
+  }
+  .signup-container {
+    height: fit-content;
+  }
 }

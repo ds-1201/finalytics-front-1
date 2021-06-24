@@ -1,36 +1,42 @@
-.option-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: 1px solid #6F6C99;
-    height: 55px;
-    border-radius: 10px;
-    margin-left: 40px;
-    background: none;
+.option-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid #6f6c99;
+  height: 55px;
+  border-radius: 10px;
+  margin-left: 40px;
+  background: none;
+  cursor: pointer;
 }
 
 .option-button-text {
-    align-items: center;
-    line-height: 0px;
-    font-size: 1.9em;
-    font-weight: bold;
-    color: #FFFFFF;
+  align-items: center;
+  line-height: 0px;
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .selected {
-    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
+  background: linear-gradient(
+    135deg,
+    #40ddff 0%,
+    #14bae3 19.24%,
+    #13b1e6 68.64%,
+    #11aadf 81.77%,
+    #0b98c5 100%
+  );
 }
-@media  (max-width:700px){
-    .option-button{
-        height: 55px;
-        margin-left: 5vw;
-    }
-    .option-button-text {
-       
-        font-size: 5vw;
-        font-weight: bold;
-        color: #FFFFFF;
-    }
-    
+@media (max-width: 700px) {
+  .option-button {
+    height: 55px;
+    margin-left: 5vw;
+  }
+  .option-button-text {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #ffffff;
+  }
 }

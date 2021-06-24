@@ -5,6 +5,7 @@ import "./Chart.css";
 export default class Chart extends React.Component {
   constructor(props) {
     super();
+    // this.options = {};
   }
 
   render() {
@@ -60,6 +61,12 @@ export default class Chart extends React.Component {
                 return tooltipItem.yLabel;
               },
             },
+            mode: "index",
+            intersect: false,
+          },
+          hover: {
+            mode: "index",
+            intersect: false,
           },
           scales: {
             yAxes: [
@@ -79,6 +86,10 @@ export default class Chart extends React.Component {
               },
             ],
           },
+          onHover: (event, chartElement) => {
+            event.target.style.cursor = chartElement[0] ? "pointer" : "default";
+          },
+          responsive: true,
         }}
       />
     );
