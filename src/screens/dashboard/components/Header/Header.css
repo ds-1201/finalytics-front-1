@@ -1,4 +1,13 @@
 /* Dashboard Header Styling */
+@font-face {
+    font-family: 'gilroybold';
+    src: url(../../../Authentication/assets/CSS-files/Gilroy-ExtraBold.otf);
+  }
+  @font-face {
+    font-family: 'gilroylight';
+    src: url(../../../Authentication/assets/CSS-files/Gilroy-Light.otf);
+  }
+
 .header-container {
     display: flex;
     width: 77.6vw;
@@ -21,6 +30,7 @@
     font-size: 1.9em;
     font-weight: bold;
     color: #FFFFFF;
+    font-family: gilroybold;
 }
 
 /* How to Trade Header Styling */

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'gilroybold';
+  src: url(./assets/CSS-files/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: 'gilroylight';
+  src: url(./assets/CSS-files/Gilroy-Light.otf);
+}
 .signin-container {
   display: flex;
   flex-direction: column;
@@ -9,7 +17,7 @@
   width: 250px;
   height: 58px;
   /* margin-top: 130px; */
-  font-family: Inter;
+  font-family: gilroybold;
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
