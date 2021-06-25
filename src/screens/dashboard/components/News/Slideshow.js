@@ -2,7 +2,7 @@ import './Slideshow.css';
 import React from "react";
 
 
-const colors = ["one","TWO","THREE","FOUR","FIVE"];
+const colors = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"];
 const delay = 5000;
 
 function Slideshow() {
@@ -36,47 +36,139 @@ function Slideshow() {
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        <div className="card1">
+        <div className="card" id="card1" >
             <div className="innerdata">
                 <div className="myimage"></div>
                 <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2> Shares of Adani Green Energy Ltd. traded 2.14 per cent down in Thursday's trade at 02:11PM (IST).Around 10,477 shares changed hands on the counter.
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
               </a>
                 </div>
             </div>
         </div>
-        <div className="card2"><div className="innerdata">
+        <div className="card" id="card2" >
+            <div className="innerdata">
                 <div className="myimage"></div>
                 <div className="news1">
-                <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2> Shares of Adani Green Energy Ltd. traded 2.14 per cent down in Thursday's trade at 02:11PM (IST).Around 10,477 shares changed hands on the counter.
-              </a>
-                </div>
-            </div>
-            </div>
-        <div className="card3">
-        <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-                <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2> Shares of Adani Green Energy Ltd. traded 2.14 per cent down in Thursday's trade at 02:11PM (IST).Around 10,477 shares changed hands on the counter.
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
               </a>
                 </div>
             </div>
         </div>
-        <div className="card4"><div className="innerdata">
+        <div className="card" id="card3" >
+            <div className="innerdata">
                 <div className="myimage"></div>
                 <div className="news1">
-                <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2> Shares of Adani Green Energy Ltd. traded 2.14 per cent down in Thursday's trade at 02:11PM (IST).Around 10,477 shares changed hands on the counter.
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
               </a>
                 </div>
             </div>
-            </div>
-        <div className="card5">
-        <div className="innerdata">
+        </div>
+        <div className="card" id="card4" >
+            <div className="innerdata">
                 <div className="myimage"></div>
                 <div className="news1">
-                <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2> Shares of Adani Green Energy Ltd. traded 2.14 per cent down in Thursday's trade at 02:11PM (IST).Around 10,477 shares changed hands on the counter.
-                </a>
-                 </div>
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card5" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card6" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card7" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card8" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card9" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card10" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card11" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card12" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card13" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card14" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
+            </div>
+        </div>
+        <div className="card" id="card15" >
+            <div className="innerdata">
+                <div className="myimage"></div>
+                <div className="news1">
+              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
+              </a>
+                </div>
             </div>
         </div>
       </div>
