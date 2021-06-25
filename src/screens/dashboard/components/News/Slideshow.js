@@ -109,11 +109,11 @@ function Slideshow() {
             <div className="card" id={`card${index + 1}`} key={news.id}>
               <div className="innerdata">
                 <div className="myimage">
-                  {/* <img className="news-img" src={news.image} alt="news-img" /> */}
+                  <img className="news-img" src={news.image} alt="news-img" />
                 </div>
                 <div className="news1">
                   <a href={news.url} target="_blank" rel="noopener noreferrer">
-                    <h2>{news.headline}</h2>
+                    <h2 id="newsHead">{news.headline}</h2>
                   </a>
                 </div>
               </div>
@@ -126,7 +126,7 @@ function Slideshow() {
         {colors.map((_, idx) => (
           <div
             key={idx}
-            className={`slideshowDot${index === idx + 1 ? " active" : ""}`}
+            className={`slideshowDot${index === idx  ? " active" : ""}`}
             onClick={() => {
               setIndex(idx);
             }}
