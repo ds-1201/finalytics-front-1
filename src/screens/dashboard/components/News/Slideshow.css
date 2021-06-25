@@ -5,7 +5,7 @@
 }
 
 .slideshowSlider {
-  white-space:nowrap;
+  white-space: nowrap;
   transition: ease 1000ms;
 }
 
@@ -23,12 +23,10 @@
   cursor: pointer;
   border-radius: 50%;
   opacity: 0.3;
-
 }
 
 .slideshowDot.active {
-  
-  background-color: rgb(206, 114, 114);;
+  background-color: rgb(206, 114, 114);
   height: 12px;
   width: 12px;
 }
@@ -57,91 +55,288 @@ a:active {
   text-decoration: underline;
 }
 
-
-.card{ 
-    display: inline-block;
-    height: 35vh;
-    width: 100%;
-    border-radius: 40px; 
-}
-#card1{
-  background-image: linear-gradient(to left top, #d08ae4, #b47bd9, #976dcd, #7860c1, #5653b4, #4059b3, #285db1, #0061ac, #0074ac, #0084a4, #3f919c, #6a9c98);
-}
-#card2{
-  background-image: linear-gradient(to left top, #3a124b, #2d1440, #221335, #191229, #120d1c, #120c1e, #110c20, #100b22, #111035, #101148, #10125c, #111170);
-}
-#card3{
-  background-image: linear-gradient(to left top, #ff0043, #cf0059, #97165e, #602053, #311c39, #2a1a3b, #22183d, #16173f, #17206c, #11289b, #0430cc, #0035ff);
-}
-#card4{
-  background-image: linear-gradient(to left top, #310087, #002586, #00317a, #003768, #003a54, #09465c, #195362, #295f68, #2b7d8b, #299cb0, #20bdd6, #00deff);
-
-}
-#card5{
-  background-image: linear-gradient(to left top, #b5b1bc, #a495ab, #987897, #8e5a7e, #843b61, #7a2b55, #701a4a, #66003f, #5a0044, #4c0249, #3b074d, #260c50);
-
-}
-#card6{
-  background-image: linear-gradient(to left top, #000000, #150d10, #21151c, #2c1c28, #372436, #552d48, #773556, #9b3c5e, #d35248, #e9830a, #d2c100, #78ff00);
-
-}
-#card7{
-  background-image: linear-gradient(to left top, #ffffff, #cacaca, #979797, #676767, #3b3b3b, #372e3c, #3b1f36, #400728, #68004c, #8c007d, #a700b8, #b100ff);
-
-}
-#card8{
-  background-image: linear-gradient(to left top, #c2c1be, #9b9997, #767472, #525050, #302f2f, #3a2b2c, #432729, #4b2226, #813932, #b45733, #e07e29, #ffad00);
-
-}
-#card9{
-  background-image: linear-gradient(to right bottom, #ff00a0, #ff366b, #ff7138, #fea300, #d5cc00, #a0d946, #68df79, #00e2a9, #00c7d8, #00a6ff, #0079ff, #0d00ff);
-}
-#card10{
-  background-image: linear-gradient(to right bottom, #af2a2a, #ba0042, #bd005f, #b60081, #a000a5, #8b3ec8, #675de7, #0077ff, #00a3ff, #00c2fc, #00d9bf, #1fe97a);
-
-}
-#card11{
-  background-image: linear-gradient(to right bottom, #f8ff00, #ffdb00, #ffb600, #fd9200, #f36d00, #e77000, #dc7200, #d17400, #c19500, #a6b400, #7ed03d, #1fe97a);
-
-}
-#card12{
-  background-image: linear-gradient(to right bottom, #110149, #003074, #005485, #00767f, #009570, #00a666, #18b555, #42c438, #3dcd49, #36d65a, #2ce06a, #1fe97a);
-
-}
-#card13{
-  
-background-image: linear-gradient(to right bottom, #110149, #5b004d, #8e0043, #b22d32, #c4611b, #c77e1a, #c69925, #c2b43a, #c6bf52, #cbcb68, #d0d57e, #d6e094);
-
-}
-#card14{
-  background-image: linear-gradient(to right bottom, #110149, #3b0052, #5d0057, #7d0059, #9a0059, #b11f53, #c4394c, #d35345, #d97b45, #da9f52, #d8c16e, #d6e094);
-
-}
-#card15{
-  background-image: linear-gradient(to right bottom, #110149, #1b0960, #271278, #321c92, #3d26ac, #8218a7, #b2039e, #d80692, #f64c68, #f58654, #e6b763, #d6e094);
+.news-img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
- .innerdata{
-     margin: 2vw;
-     display: flex;
-     flex-direction: row;
-    white-space:initial;
+.card {
+  display: inline-block;
+  height: 35vh;
+  width: 100%;
+  border-radius: 40px;
+}
+#card1 {
+  background-image: linear-gradient(
+    to left top,
+    #d08ae4,
+    #b47bd9,
+    #976dcd,
+    #7860c1,
+    #5653b4,
+    #4059b3,
+    #285db1,
+    #0061ac,
+    #0074ac,
+    #0084a4,
+    #3f919c,
+    #6a9c98
+  );
+}
+#card2 {
+  background-image: linear-gradient(
+    to left top,
+    #3a124b,
+    #2d1440,
+    #221335,
+    #191229,
+    #120d1c,
+    #120c1e,
+    #110c20,
+    #100b22,
+    #111035,
+    #101148,
+    #10125c,
+    #111170
+  );
+}
+#card3 {
+  background-image: linear-gradient(
+    to left top,
+    #ff0043,
+    #cf0059,
+    #97165e,
+    #602053,
+    #311c39,
+    #2a1a3b,
+    #22183d,
+    #16173f,
+    #17206c,
+    #11289b,
+    #0430cc,
+    #0035ff
+  );
+}
+#card4 {
+  background-image: linear-gradient(
+    to left top,
+    #310087,
+    #002586,
+    #00317a,
+    #003768,
+    #003a54,
+    #09465c,
+    #195362,
+    #295f68,
+    #2b7d8b,
+    #299cb0,
+    #20bdd6,
+    #00deff
+  );
+}
+#card5 {
+  background-image: linear-gradient(
+    to left top,
+    #b5b1bc,
+    #a495ab,
+    #987897,
+    #8e5a7e,
+    #843b61,
+    #7a2b55,
+    #701a4a,
+    #66003f,
+    #5a0044,
+    #4c0249,
+    #3b074d,
+    #260c50
+  );
+}
+#card6 {
+  background-image: linear-gradient(
+    to left top,
+    #000000,
+    #150d10,
+    #21151c,
+    #2c1c28,
+    #372436,
+    #552d48,
+    #773556,
+    #9b3c5e,
+    #d35248,
+    #e9830a,
+    #d2c100,
+    #78ff00
+  );
+}
+#card7 {
+  background-image: linear-gradient(
+    to left top,
+    #ffffff,
+    #cacaca,
+    #979797,
+    #676767,
+    #3b3b3b,
+    #372e3c,
+    #3b1f36,
+    #400728,
+    #68004c,
+    #8c007d,
+    #a700b8,
+    #b100ff
+  );
+}
+#card8 {
+  background-image: linear-gradient(
+    to left top,
+    #c2c1be,
+    #9b9997,
+    #767472,
+    #525050,
+    #302f2f,
+    #3a2b2c,
+    #432729,
+    #4b2226,
+    #813932,
+    #b45733,
+    #e07e29,
+    #ffad00
+  );
+}
+#card9 {
+  background-image: linear-gradient(
+    to right bottom,
+    #ff00a0,
+    #ff366b,
+    #ff7138,
+    #fea300,
+    #d5cc00,
+    #a0d946,
+    #68df79,
+    #00e2a9,
+    #00c7d8,
+    #00a6ff,
+    #0079ff,
+    #0d00ff
+  );
+}
+#card10 {
+  background-image: linear-gradient(
+    to right bottom,
+    #af2a2a,
+    #ba0042,
+    #bd005f,
+    #b60081,
+    #a000a5,
+    #8b3ec8,
+    #675de7,
+    #0077ff,
+    #00a3ff,
+    #00c2fc,
+    #00d9bf,
+    #1fe97a
+  );
+}
+#card11 {
+  background-image: linear-gradient(
+    to right bottom,
+    #f8ff00,
+    #ffdb00,
+    #ffb600,
+    #fd9200,
+    #f36d00,
+    #e77000,
+    #dc7200,
+    #d17400,
+    #c19500,
+    #a6b400,
+    #7ed03d,
+    #1fe97a
+  );
+}
+#card12 {
+  background-image: linear-gradient(
+    to right bottom,
+    #110149,
+    #003074,
+    #005485,
+    #00767f,
+    #009570,
+    #00a666,
+    #18b555,
+    #42c438,
+    #3dcd49,
+    #36d65a,
+    #2ce06a,
+    #1fe97a
+  );
+}
+#card13 {
+  background-image: linear-gradient(
+    to right bottom,
+    #110149,
+    #5b004d,
+    #8e0043,
+    #b22d32,
+    #c4611b,
+    #c77e1a,
+    #c69925,
+    #c2b43a,
+    #c6bf52,
+    #cbcb68,
+    #d0d57e,
+    #d6e094
+  );
+}
+#card14 {
+  background-image: linear-gradient(
+    to right bottom,
+    #110149,
+    #3b0052,
+    #5d0057,
+    #7d0059,
+    #9a0059,
+    #b11f53,
+    #c4394c,
+    #d35345,
+    #d97b45,
+    #da9f52,
+    #d8c16e,
+    #d6e094
+  );
+}
+#card15 {
+  background-image: linear-gradient(
+    to right bottom,
+    #110149,
+    #1b0960,
+    #271278,
+    #321c92,
+    #3d26ac,
+    #8218a7,
+    #b2039e,
+    #d80692,
+    #f64c68,
+    #f58654,
+    #e6b763,
+    #d6e094
+  );
+}
+
+.innerdata {
+  margin: 2vw;
+  display: flex;
+  flex-direction: row;
+  white-space: initial;
   transition: ease 1000ms;
-  
 }
-.myimage{
-    width: 15vw;
-    height: 25vh;
-    border-radius: 10%;
-    background-color: yellowgreen;
+.myimage {
+  width: 15vw;
+  height: 25vh;
+  border-radius: 10%;
+  background-color: yellowgreen;
 }
-.news1{ 
-    margin-left: 5vw;
-    width: 25vw;
-    overflow: visible;
-} 
-
-
-
-
-
+.news1 {
+  margin-left: 5vw;
+  width: 25vw;
+  overflow: visible;
+}

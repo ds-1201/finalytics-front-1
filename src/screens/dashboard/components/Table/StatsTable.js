@@ -111,8 +111,8 @@ const StatsTable = ({ currentStock }) => {
         <h2 id="histitle">Key Stats</h2>
       </div>
       <TableContainer
-        cellpadding="0"
-        cellspacing="0"
+        cellPadding="0"
+        cellSpacing="0"
         id="statstable"
         component={Paper}
       >

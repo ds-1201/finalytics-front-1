@@ -97,12 +97,12 @@ function SearchBar(props) {
                 cy="14.5"
                 r="9.5"
                 stroke="#5B5A99"
-                stroke-width="2"
+                strokeWidth="2"
               />
               <path
                 d="M21 22L25.7929 26.7929"
                 stroke="#5B5A99"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </svg>
           </div>

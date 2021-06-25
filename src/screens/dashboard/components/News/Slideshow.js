@@ -1,13 +1,44 @@
-import './Slideshow.css';
-import React from "react";
+import "./Slideshow.css";
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 
-
-const colors = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"];
+const colors = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+];
 const delay = 5000;
 
+function getRandom(arr, n) {
+  var result = new Array(n),
+    len = arr.length,
+    taken = new Array(len);
+  if (n > len)
+    throw new RangeError("getRandom: more elements taken than available");
+  while (n--) {
+    var x = Math.floor(Math.random() * len);
+    result[n] = arr[x in taken ? taken[x] : x];
+    taken[x] = --len in taken ? taken[len] : len;
+  }
+  return result;
+}
+
 function Slideshow() {
-  const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
+  const [newsFeed, setNewsFeed] = useState([]);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -15,7 +46,44 @@ function Slideshow() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
+    let unmount = false;
+
+    axios
+      .get(process.env.REACT_APP_URL_STATS, {
+        auth: {
+          username: process.env.REACT_APP_URL_USERNAME,
+          password: process.env.REACT_APP_URL_PASSWORD,
+        },
+      })
+      .then((res) => {
+        if (!unmount) {
+          const urls = res.data["URL1"].concat(res.data["URL3"]);
+          const headlines = res.data["HEADLINES1"].concat(
+            res.data["HEADLINES3"]
+          );
+          const imgs = res.data["IMAGE_LINK1"].concat(res.data["IMAGE_LINK3"]);
+          // console.log(urls, headlines, imgs);
+          const randomHeadLines = getRandom(headlines, 15);
+          const randomNews = randomHeadLines.map((headLine) => {
+            const index = headlines.indexOf(headLine);
+            return {
+              id: index,
+              headline: headLine,
+              image: imgs[index],
+              url: urls[index],
+            };
+          });
+          setNewsFeed(randomNews);
+        }
+        return res;
+      });
+    return () => {
+      unmount = true;
+    };
+  }, []);
+
+  useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
@@ -36,148 +104,29 @@ function Slideshow() {
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        <div className="card" id="card1" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
+        {newsFeed.map((news, index) => {
+          return (
+            <div className="card" id={`card${index + 1}`} key={news.id}>
+              <div className="innerdata">
+                <div className="myimage">
+                  <img className="news-img" src={news.image} alt="news-img" />
                 </div>
-            </div>
-        </div>
-        <div className="card" id="card2" >
-            <div className="innerdata">
-                <div className="myimage"></div>
                 <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
+                  <a href={news.url} target="_blank" rel="noopener noreferrer">
+                    <h2>{news.headline}</h2>
+                  </a>
                 </div>
+              </div>
             </div>
-        </div>
-        <div className="card" id="card3" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card4" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card5" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card6" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card7" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card8" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card9" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card10" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card11" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card12" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card13" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card14" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
-        <div className="card" id="card15" >
-            <div className="innerdata">
-                <div className="myimage"></div>
-                <div className="news1">
-              <a href="https://economictimes.indiatimes.com/markets/stocks/stock-watch/adani-green-shares-down-2-14-as-nifty-gains/articleshow/83805047.cms" target="_blank"><h2>Adani Green shares down 2.14% as Nifty gains </h2>
-              </a>
-                </div>
-            </div>
-        </div>
+          );
+        })}
       </div>
 
       <div className="slideshowDots">
         {colors.map((_, idx) => (
           <div
             key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
+            className={`slideshowDot${index === idx + 1 ? " active" : ""}`}
             onClick={() => {
               setIndex(idx);
             }}
