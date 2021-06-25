@@ -33,8 +33,8 @@ const TrendChart = (props) => {
           const data = response.data.info;
           setPrevClose(data.previousClose);
           setCurrentValue(data.regularMarketPrice);
-          return response;
         }
+        return response;
       })
       .catch((error) => {
         console.log(error.message);
@@ -72,17 +72,16 @@ const TrendChart = (props) => {
           }
           setStocks(res.data.Close);
           setIsLoading(false);
-          return res;
         }
+        return res;
       })
       .catch((err) => {
-        console.log(err.message);
         setIsLoading(false);
         return err;
       });
     return () => {
       mount = false;
-      source.cancel();
+      source.cancel("Component unmount");
     };
   }, [props.currentStock]);
 

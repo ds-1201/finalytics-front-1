@@ -16,7 +16,20 @@ import axios from "axios";
 import SubLine from "./components/SubLine";
 import { useHistory } from "react-router-dom";
 
+const useStyles = makeStyles({
+  underline: {
+    "&&&:before": {
+      borderBottom: "none",
+    },
+    "&&:after": {
+      borderBottom: "none",
+    },
+  },
+});
+
 function SignUp() {
+  const classes = useStyles();
+
   const initialValues = {
     username: "",
     email: "",
@@ -39,7 +52,7 @@ function SignUp() {
   };
   let history = useHistory();
   useEffect(() => {
-    if (localStorage.id != undefined) history.replace("/");
+    if (localStorage.id !== undefined) history.replace("/");
   }, []);
   const handleCheckbox = (e) => {
     setCheckboxValue(e.target.checked);
@@ -96,7 +109,10 @@ function SignUp() {
         <form className="signup-form" onSubmit={handleFormSubmit}>
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faUser} style={{marginLeft:"6px"}}/>,
+              startAdornment: (
+                <FontAwesomeIcon icon={faUser} style={{ marginLeft: "6px" }} />
+              ),
+              classes,
             }}
             className="text-field-up"
             id="outlined-basic"
@@ -113,13 +129,18 @@ function SignUp() {
 
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faEnvelope}  style={{marginLeft:"6px"}}/>,
+              startAdornment: (
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ marginLeft: "6px" }}
+                />
+              ),
+              classes,
             }}
             label="Email"
             className="text-field-up"
             id="outlined-basic"
             placeholder="Email"
-          
             margin="normal"
             onChange={handleInputChange}
             name="email"
@@ -137,33 +158,36 @@ function SignUp() {
 
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faLock}  style={{marginLeft:"6px"}} />,
+              startAdornment: (
+                <FontAwesomeIcon icon={faLock} style={{ marginLeft: "6px" }} />
+              ),
+              classes,
             }}
             label="Password"
             className="text-field-up"
             id="outlined-basic"
             type="password"
             placeholder="Password"
-           
             margin="normal"
             onChange={handleInputChange}
             name="password"
             value={userDetails.password}
-            type="password"
           />
           {errorMessages.password && (
             <SubLine size="14px">{errorMessages.password}</SubLine>
           )}
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faLock}  style={{marginLeft:"6px"}} />,
+              startAdornment: (
+                <FontAwesomeIcon icon={faLock} style={{ marginLeft: "6px" }} />
+              ),
+              classes,
             }}
             label="Confirm Password"
             className="text-field-up"
             id="outlined-basic"
             type="password"
             placeholder="Confirm Password"
-  
             margin="normal"
             onChange={handleInputChange}
             name="cpassword"

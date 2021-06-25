@@ -10,11 +10,16 @@ import SubLine from "./components/SubLine";
 import OtpField from "./components/OtpField";
 import { useHistory } from "react-router-dom";
 
-const useStyles = makeStyles(() => ({
-  noBorder: {
-    border: "none",
+const useStyles = makeStyles({
+  underline: {
+    "&&&:before": {
+      borderBottom: "none",
+    },
+    "&&:after": {
+      borderBottom: "none",
+    },
   },
-}));
+});
 
 function SignIn() {
   const classes = useStyles();
@@ -188,7 +193,7 @@ function SignIn() {
                     style={{ marginLeft: "6px", cursor: "default" }}
                   />
                 ),
-                classes: { notchedOutline: classes.noBorder },
+                classes,
               }}
               disableUnderline={true}
               className="text-field"
@@ -213,6 +218,7 @@ function SignIn() {
                     style={{ marginLeft: "6px", cursor: "default" }}
                   />
                 ),
+                classes,
               }}
               className={"text-field"}
               id="outlined-basic"

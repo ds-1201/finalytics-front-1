@@ -109,7 +109,7 @@ function Slideshow() {
             <div className="card" id={`card${index + 1}`} key={news.id}>
               <div className="innerdata">
                 <div className="myimage">
-                  <img className="news-img" src={news.image} alt="news-img" />
+                  {/* <img className="news-img" src={news.image} alt="news-img" /> */}
                 </div>
                 <div className="news1">
                   <a href={news.url} target="_blank" rel="noopener noreferrer">

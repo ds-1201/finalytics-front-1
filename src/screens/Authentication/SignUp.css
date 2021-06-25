@@ -35,7 +35,7 @@
   width: 35vw;
   height: 50px;
   color: black;
-  background:rgb(232, 240, 254);
+  background: rgb(232, 240, 254);
 
   border-radius: 12px;
 }
@@ -46,6 +46,9 @@
   height: 10px;
 }
 
+.tc-text {
+  font-family: gilroybold;
+}
 .tc-text u {
   cursor: pointer;
 }
@@ -62,7 +65,7 @@
 
 .signup-button-text {
   margin: auto;
-  font-family: Inter;
+  font-family: gilroybold;
   font-style: normal;
   font-weight: 800;
   font-size: 19.95px;
@@ -78,7 +81,7 @@
 
 .footer-text {
   width: 350px !important;
-  font-family: Inter;
+  font-family: gilroybold;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -91,7 +94,7 @@
 .footer-text-link {
   width: 77px;
   height: 24px;
-  font-family: Inter;
+  font-family: gilroybold;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;

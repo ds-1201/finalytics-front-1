@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Account_Settings.css";
 import { TextField, Checkbox } from "@material-ui/core";
 import Select from "react-select";
-import countryList from "react-select-country-list";
+import { makeStyles } from "@material-ui/core/styles";
 const optionsGender = [
   { value: "Male", label: "Male" },
   { value: "Female", label: "Female" },
@@ -398,6 +398,16 @@ class Form extends Component {
                 value={this.state.name}
                 onChange={this.namehandler}
                 placeholder="Enter Name"
+                InputProps={{
+                  underline: {
+                    "&&&:before": {
+                      borderBottom: "none",
+                    },
+                    "&&:after": {
+                      borderBottom: "none",
+                    },
+                  },
+                }}
               />
               <br />
               <label id="l2">Email </label>{" "}

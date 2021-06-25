@@ -74,8 +74,8 @@ const StatsTable = ({ currentStock }) => {
             minimum: data.fiftyTwoWeekLow.toFixed(2),
             maximum: data.fiftyTwoWeekHigh.toFixed(2),
           });
-          return res;
         }
+        return res;
       })
       .catch((err) => {
         console.log(err.message);
