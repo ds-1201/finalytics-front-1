@@ -33,10 +33,12 @@
 }
 
 .text-field {
+  /* padding-top: 6px;
+  padding-left: 10px; */
   width: 40vw;
   height: 50px;
   color: black;
-  background: white;
+  background:rgb(232, 240, 254);
   border-radius: 12px;
 }
 
@@ -128,4 +130,9 @@
   .signin-container {
     height: max-content;
   }
+}
+.MuiFormLabel-root {
+  margin-left:6px;
+  margin-top:5px;
+  cursor: default
 }

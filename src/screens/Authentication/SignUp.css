@@ -34,7 +34,8 @@
 .text-field-up {
   width: 35vw;
   height: 50px;
-  background: white;
+  color: black;
+  background:rgb(232, 240, 254);
 
   border-radius: 12px;
 }

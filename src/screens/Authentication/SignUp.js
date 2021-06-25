@@ -96,13 +96,12 @@ function SignUp() {
         <form className="signup-form" onSubmit={handleFormSubmit}>
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faUser} />,
+              startAdornment: <FontAwesomeIcon icon={faUser} style={{marginLeft:"6px"}}/>,
             }}
             className="text-field-up"
             id="outlined-basic"
             placeholder="Username"
             label="Username"
-            variant="filled"
             margin="normal"
             name="username"
             value={userDetails.username}
@@ -114,13 +113,13 @@ function SignUp() {
 
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faEnvelope} />,
+              startAdornment: <FontAwesomeIcon icon={faEnvelope}  style={{marginLeft:"6px"}}/>,
             }}
             label="Email"
             className="text-field-up"
             id="outlined-basic"
             placeholder="Email"
-            variant="filled"
+          
             margin="normal"
             onChange={handleInputChange}
             name="email"
@@ -138,14 +137,14 @@ function SignUp() {
 
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faLock} />,
+              startAdornment: <FontAwesomeIcon icon={faLock}  style={{marginLeft:"6px"}} />,
             }}
             label="Password"
             className="text-field-up"
             id="outlined-basic"
             type="password"
             placeholder="Password"
-            variant="filled"
+           
             margin="normal"
             onChange={handleInputChange}
             name="password"
@@ -157,14 +156,14 @@ function SignUp() {
           )}
           <TextField
             InputProps={{
-              startAdornment: <FontAwesomeIcon icon={faLock} />,
+              startAdornment: <FontAwesomeIcon icon={faLock}  style={{marginLeft:"6px"}} />,
             }}
             label="Confirm Password"
             className="text-field-up"
             id="outlined-basic"
             type="password"
             placeholder="Confirm Password"
-            variant="filled"
+  
             margin="normal"
             onChange={handleInputChange}
             name="cpassword"

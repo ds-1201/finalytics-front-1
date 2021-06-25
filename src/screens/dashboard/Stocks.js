@@ -13,7 +13,7 @@ const Stocks = ({ currentStock }) => {
         <SectorTrends currentStock={currentStock} />
       </div>
       <div>
-        <Slideshow></Slideshow>
+        <Slideshow />
       </div>
     </React.Fragment>
   );

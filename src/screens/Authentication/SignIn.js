@@ -9,7 +9,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import SubLine from "./components/SubLine";
 import OtpField from "./components/OtpField";
 import { useHistory } from "react-router-dom";
+
+const useStyles = makeStyles(() => ({
+  noBorder: {
+    border: "none",
+  },
+}));
+
 function SignIn() {
+  const classes = useStyles();
   const initialValues = {
     email: "",
     password: "",
@@ -38,7 +46,7 @@ function SignIn() {
     setResetPasswordStatus(0);
   };
   useEffect(() => {
-    if (localStorage.id != undefined) history.replace("/");
+    if (localStorage.id !== undefined) history.replace("/");
   }, []);
 
   const handleCredentialsSubmit = (e) => {
@@ -155,6 +163,7 @@ function SignIn() {
       });
     // history.replace("/",)
   };
+
   return (
     <Auth>
       {status === 200 ? (
@@ -173,33 +182,48 @@ function SignIn() {
           <form className="signin-form" onSubmit={handleCredentialsSubmit}>
             <TextField
               InputProps={{
-                startAdornment: <FontAwesomeIcon icon={faUser} />,
+                startAdornment: (
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    style={{ marginLeft: "6px", cursor: "default" }}
+                  />
+                ),
+                classes: { notchedOutline: classes.noBorder },
               }}
+              disableUnderline={true}
               className="text-field"
               id="outlined-basic"
               label="Email"
-              variant="filled"
+              placeholder="Email"
+              variant="standard"
               margin="normal"
               position="start"
               name="email"
               value={credentials.email}
               onChange={handleInputChange}
+              autoFocus={true}
             />
             {errorMessages.email && <SubLine>{errorMessages.email}</SubLine>}
 
             <TextField
               InputProps={{
-                startAdornment: <FontAwesomeIcon icon={faLock} />,
+                startAdornment: (
+                  <FontAwesomeIcon
+                    icon={faLock}
+                    style={{ marginLeft: "6px", cursor: "default" }}
+                  />
+                ),
               }}
-              className="text-field"
+              className={"text-field"}
               id="outlined-basic"
               label="Password"
-              variant="filled"
+              placeholder="Password"
               margin="normal"
               type="password"
               name="password"
               value={credentials.password}
               onChange={handleInputChange}
+              autoFocus={true}
             />
             {errorMessages.password && (
               <SubLine>{errorMessages.password}</SubLine>
