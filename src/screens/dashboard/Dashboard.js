@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import Stocks from "./Stocks";
 import Crypto from "./Crypto";
+// import Slideshow from "./components/News/Slideshow";
 
 function Dashboard() {
   const [showStocks, setShowStocks] = useState(true);
@@ -18,8 +19,8 @@ function Dashboard() {
     Industry: "Other Pharmaceuticals",
   });
   const [currentCrypto, setCurrentCrypto] = useState({
-    Symbol: "BTC",
-    Name: "Bitcoin",
+    Symbol: "DOGE",
+    Name: "Dogecoin",
   });
 
   useEffect(() => {

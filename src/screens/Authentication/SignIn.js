@@ -66,8 +66,8 @@ function SignIn() {
         `email=${credentials.email}&password=${credentials.password}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
         }
       )
@@ -91,8 +91,8 @@ function SignIn() {
         `email=${credentials.email}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
         }
       )
@@ -117,8 +117,8 @@ function SignIn() {
           `email=${credentials.email}`,
           {
             auth: {
-              username: process.env.REACT_APP_URL_USERNAME,
-              password: process.env.REACT_APP_URL_PASSWORD,
+              username: "testotp@fintract.co.uk",
+              password: "IDhyYt96rse45ys0hg456jy0ti",
             },
           }
         )
@@ -147,8 +147,8 @@ function SignIn() {
         `otp=${otp}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
         }
       )

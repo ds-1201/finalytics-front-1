@@ -32,12 +32,12 @@ function ChartContainer(props) {
     const source = axios.CancelToken.source();
     axios
       .post(
-        process.env.REACT_APP_URL_INFO,
+        "https://finalyticsad.fintract.co.uk/info/",
         `companycode=${props.currentStock.Symbol}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
           cancelToken: source.token,
         }
@@ -66,12 +66,12 @@ function ChartContainer(props) {
     const source = axios.CancelToken.source();
     axios
       .post(
-        process.env.REACT_APP_URL_STOCKS_GRAPH,
+        "https://finalyticsad.fintract.co.uk/stocks-graph/",
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
           cancelToken: source.token,
         }

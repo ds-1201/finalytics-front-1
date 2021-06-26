@@ -100,27 +100,93 @@ const CryptoList = () => {
                   Bitcoin
                 </TableCell>
                 <TableCell className={classes.tableCell} id="od1">
-                  26,66,108.00
+                  $31,853.14
                 </TableCell>
                 <TableCell className={classes.tableCell} id="od1">
-                  +13.9645%
+                  -8.58%
                 </TableCell>
                 <TableCell className={classes.tableCell} id="od1">
-                  49.898T
+                  $602,848,131,541
                 </TableCell>
                 <TableCell className={classes.tableCell} id="od1">
-                  3.849T
+                  $38,074,555,954
                 </TableCell>
               </TableRow>
               <TableRow className={classes.tableRow} id="Even1">
+                <TableCell className={classes.tableCell}>ETC</TableCell>
+                <TableCell className={classes.tableCell}>Ethereum</TableCell>
+                <TableCell className={classes.tableCell}>$1,814.42</TableCell>
+                <TableCell className={classes.tableCell}>-10.22% </TableCell>
+                <TableCell className={classes.tableCell}>
+                  $213,542,363,490
+                </TableCell>
+                <TableCell className={classes.tableCell}>
+                  $21,563,354,321
+                </TableCell>
+              </TableRow>
+              <TableRow className={classes.tableRow} id="Odd1">
+                <TableCell className={classes.tableCell} id="od1">
+                  USDT
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  Tether
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $0.9996
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  -0.06%
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $62,523,928,805
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $62,684,875,279
+                </TableCell>
+              </TableRow>
+              <TableRow className={classes.tableRow} id="Even1">
+                <TableCell className={classes.tableCell}>BNB</TableCell>
+                <TableCell className={classes.tableCell}>
+                  Binance Coin
+                </TableCell>
+                <TableCell className={classes.tableCell}>$279.65</TableCell>
+                <TableCell className={classes.tableCell}>-10.72% </TableCell>
+                <TableCell className={classes.tableCell}>
+                  $43,327,138,378
+                </TableCell>
+                <TableCell className={classes.tableCell}>
+                  $2,175,723,276
+                </TableCell>
+              </TableRow>
+              <TableRow className={classes.tableRow} id="Odd1">
+                <TableCell className={classes.tableCell} id="od1">
+                  ADA
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  Cardano
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $ 1.26
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  -8.89%
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $40,711,107,615
+                </TableCell>
+                <TableCell className={classes.tableCell} id="od1">
+                  $4,177,678,155
+                </TableCell>
+              </TableRow>
+              {/* <TableRow className={classes.tableRow} id="Even1">
                 <TableCell className={classes.tableCell}>ETC</TableCell>
                 <TableCell className={classes.tableCell}>Ethereum</TableCell>
                 <TableCell className={classes.tableCell}>1,89,727.47</TableCell>
                 <TableCell className={classes.tableCell}>+8.0063% </TableCell>
                 <TableCell className={classes.tableCell}>21.802T </TableCell>
                 <TableCell className={classes.tableCell}>2.723T</TableCell>
-              </TableRow>
-              <TableRow className={classes.tableRow} id="Odd1">
+              </TableRow> */}
+              {/* <TableRow className={classes.tableRow} id="Odd1">
                 <TableCell className={classes.tableCell} id="od1">
                   BTC
                 </TableCell>
@@ -147,63 +213,7 @@ const CryptoList = () => {
                 <TableCell className={classes.tableCell}>+8.0063% </TableCell>
                 <TableCell className={classes.tableCell}>21.802T </TableCell>
                 <TableCell className={classes.tableCell}>2.723T</TableCell>
-              </TableRow>
-              <TableRow className={classes.tableRow} id="Odd1">
-                <TableCell className={classes.tableCell} id="od1">
-                  BTC
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  Bitcoin
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  26,66,108.00
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  +13.9645%
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  49.898T
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  3.849T
-                </TableCell>
-              </TableRow>
-              <TableRow className={classes.tableRow} id="Even1">
-                <TableCell className={classes.tableCell}>ETC</TableCell>
-                <TableCell className={classes.tableCell}>Ethereum</TableCell>
-                <TableCell className={classes.tableCell}>1,89,727.47</TableCell>
-                <TableCell className={classes.tableCell}>+8.0063% </TableCell>
-                <TableCell className={classes.tableCell}>21.802T </TableCell>
-                <TableCell className={classes.tableCell}>2.723T</TableCell>
-              </TableRow>
-              <TableRow className={classes.tableRow} id="Odd1">
-                <TableCell className={classes.tableCell} id="od1">
-                  BTC
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  Bitcoin
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  26,66,108.00
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  +13.9645%
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  49.898T
-                </TableCell>
-                <TableCell className={classes.tableCell} id="od1">
-                  3.849T
-                </TableCell>
-              </TableRow>
-              <TableRow className={classes.tableRow} id="Even1">
-                <TableCell className={classes.tableCell}>ETC</TableCell>
-                <TableCell className={classes.tableCell}>Ethereum</TableCell>
-                <TableCell className={classes.tableCell}>1,89,727.47</TableCell>
-                <TableCell className={classes.tableCell}>+8.0063% </TableCell>
-                <TableCell className={classes.tableCell}>21.802T </TableCell>
-                <TableCell className={classes.tableCell}>2.723T</TableCell>
-              </TableRow>
+              </TableRow> */}
             </TableBody>
           </Table>
         </TableContainer>

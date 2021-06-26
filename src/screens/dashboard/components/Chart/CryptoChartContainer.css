@@ -1,8 +1,12 @@
+.cryptoChartContainer h3 {
+  color: white;
+  text-align: center;
+}
 .cryptoChartContainer h2 {
   color: white;
   text-align: center;
 }
-
 .cryptoChartContainer {
+  margin-left: 5vw;
   width: 50%;
 }

@@ -74,8 +74,8 @@ function SignUp() {
           `email=${userDetails.email}&username=${userDetails.username}&password=${userDetails.password}&password2=${userDetails.cpassword}`,
           {
             auth: {
-              username: process.env.REACT_APP_URL_USERNAME,
-              password: process.env.REACT_APP_URL_PASSWORD,
+              username: "testotp@fintract.co.uk",
+              password: "IDhyYt96rse45ys0hg456jy0ti",
             },
           }
         )

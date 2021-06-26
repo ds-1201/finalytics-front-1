@@ -50,10 +50,10 @@ function Slideshow() {
     let unmount = false;
 
     axios
-      .get(process.env.REACT_APP_URL_STATS, {
+      .get("https://finalyticsad.fintract.co.uk/stats/", {
         auth: {
-          username: process.env.REACT_APP_URL_USERNAME,
-          password: process.env.REACT_APP_URL_PASSWORD,
+          username: "testotp@fintract.co.uk",
+          password: "IDhyYt96rse45ys0hg456jy0ti",
         },
       })
       .then((res) => {
@@ -126,7 +126,7 @@ function Slideshow() {
         {colors.map((_, idx) => (
           <div
             key={idx}
-            className={`slideshowDot${index === idx  ? " active" : ""}`}
+            className={`slideshowDot${index === idx ? " active" : ""}`}
             onClick={() => {
               setIndex(idx);
             }}

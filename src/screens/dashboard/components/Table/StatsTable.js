@@ -46,12 +46,12 @@ const StatsTable = ({ currentStock }) => {
     let source = axios.CancelToken.source();
     axios
       .post(
-        process.env.REACT_APP_URL_INFO,
+        "https://finalyticsad.fintract.co.uk/info/",
         `companycode=${currentStock.Symbol}`,
         {
           auth: {
-            username: process.env.REACT_APP_URL_USERNAME,
-            password: process.env.REACT_APP_URL_PASSWORD,
+            username: "testotp@fintract.co.uk",
+            password: "IDhyYt96rse45ys0hg456jy0ti",
           },
           cancelToken: source.token,
         }

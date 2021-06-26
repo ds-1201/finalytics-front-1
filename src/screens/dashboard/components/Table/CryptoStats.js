@@ -24,15 +24,7 @@ function convertToInternationalCurrencySystem(labelValue) {
     : Math.abs(Number(labelValue));
 }
 
-const CryptoStats = ({ crypto }) => {
-  const [dayRange, setDayRange] = useState({
-    minimum: "",
-    maximum: "",
-  });
-  const [yearRange, setYearRange] = useState({
-    minimum: "",
-    maximum: "",
-  });
+const CryptoStats = (props) => {
   const TableCell = withStyles({
     root: {
       borderBottom: "none",
@@ -54,7 +46,7 @@ const CryptoStats = ({ crypto }) => {
   return (
     <React.Fragment>
       <div>
-        <h2 id="histitle"> Price Statistics</h2>
+        <h2 className="crypto-stat-title">{props.name} Statistics</h2>
       </div>
       <TableContainer
         cellpadding="0"
@@ -78,7 +70,7 @@ const CryptoStats = ({ crypto }) => {
                 Price
               </TableCell>
               <TableCell align="left" style={{ width: "0vw" }}>
-                $649.78
+                ${(+props.currentValue).toFixed(2)}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -92,7 +84,7 @@ const CryptoStats = ({ crypto }) => {
                 Price Change
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                $4962.61
+                $ {+props.currentValue - +props.prevValue}
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
@@ -104,22 +96,24 @@ const CryptoStats = ({ crypto }) => {
                 Market Cap
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                0.07641
+                ${(+props.marCap).toFixed(2)}
               </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>Volume</TableCell>
-              <TableCell className={classes.tableCell}>8.22M</TableCell>
+              <TableCell className={classes.tableCell}>
+                ${(+props.volume).toFixed(2)}
+              </TableCell>
             </TableRow>
             <TableRow className={classes.tableRow} id="Odd1">
               <TableCell className={classes.tableCell} id="od1">
                 24 Low/24 High
               </TableCell>
               <TableCell className={classes.tableCell} id="od1">
-                $31,114.44 / $36,337.67
+                ${(+props.dayLow).toFixed(2)} / ${(+props.dayHigh).toFixed(2)}
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tableRow} id="Even1">
+            {/* <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>
                 Trading Volume
               </TableCell>
@@ -138,7 +132,7 @@ const CryptoStats = ({ crypto }) => {
             <TableRow className={classes.tableRow} id="Even1">
               <TableCell className={classes.tableCell}>Market Rank</TableCell>
               <TableCell className={classes.tableCell}>#1</TableCell>
-            </TableRow>
+            </TableRow> */}
           </TableBody>
         </Table>
       </TableContainer>
