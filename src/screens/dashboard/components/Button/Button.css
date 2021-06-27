@@ -1,11 +1,4 @@
-@font-face {
-  font-family: "gilroybold";
-  src: url(../../../Authentication/assets/CSS-files/Gilroy-ExtraBold.otf);
-}
-@font-face {
-  font-family: "gilroylight";
-  src: url(../../../Authentication/assets/CSS-files/Gilroy-Light.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 .option-button {
   display: flex;
@@ -26,7 +19,7 @@
   font-size: 1.9em;
   font-weight: bold;
   color: #ffffff;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .selected {
@@ -45,7 +38,7 @@
     margin-left: 5vw;
   }
   .option-button-text {
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-weight: bold;
     color: #ffffff;
   }

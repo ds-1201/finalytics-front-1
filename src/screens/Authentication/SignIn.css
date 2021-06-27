@@ -1,11 +1,5 @@
-@font-face {
-  font-family: "gilroybold";
-  src: url(./assets/CSS-files/Gilroy-ExtraBold.otf);
-}
-@font-face {
-  font-family: "gilroylight";
-  src: url(./assets/CSS-files/Gilroy-Light.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .signin-container {
   display: flex;
   flex-direction: column;
@@ -17,7 +11,7 @@
   width: 250px;
   height: 58px;
   /* margin-top: 130px; */
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
@@ -44,7 +38,7 @@
 
 .tc-text {
   color: #ffffff;
-  width: 238px;
+  /* width: 238px; */
   height: 20px;
 }
 
@@ -60,7 +54,7 @@
 
 .signin-button-text {
   margin: auto;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 19.95px;
@@ -75,12 +69,12 @@
 }
 
 .footer-text {
-  width: 219px;
+  width: 400px;
   height: 24px;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
@@ -88,10 +82,10 @@
 .footer-text-link {
   width: 77px;
   height: 24px;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
@@ -99,10 +93,10 @@
 .password-reset-link {
   width: 77px;
   height: 24px;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
@@ -131,8 +125,21 @@
     height: max-content;
   }
 }
+@media (max-width: 400px) {
+  .footer-text {
+    width: 95vw;
+    font-size: 5vw;
+  }
+  .footer-text-link {
+    font-size: 5vw;
+  }
+  .password-reset-link {
+    font-size: 5vw;
+  }
+}
 .MuiFormLabel-root {
   margin-left: 6px;
   margin-top: 5px;
   cursor: default;
 }
+

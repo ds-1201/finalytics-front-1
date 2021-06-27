@@ -125,7 +125,7 @@ function HeaderMenu(props) {
           <div ref={menuActive} className="usercontainer3" onClick={menuToggle}>
             <div className="profile-name-container">
               <div className="profile-pic">
-                <img className="profile-img" src="/default-profile.jpeg" />
+                <img className="profile-img" src="/default-profile.png" />
               </div>
 
               {/* <h3 className="profile-name"><b>User</b> <span className="down-arrow">

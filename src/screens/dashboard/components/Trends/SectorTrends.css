@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 #flexdash {
   display: flex;
   margin-right: 5vw;
@@ -15,6 +17,7 @@
 #trends {
   margin-left: 15vw;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 #stocks-graphs {
   margin-top: 2vh;

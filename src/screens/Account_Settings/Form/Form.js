@@ -460,7 +460,7 @@ class Form extends Component {
           <article>
             <img
               className="face_image"
-              src={process.env.PUBLIC_URL + "/default-profile.jpeg"}
+              src={process.env.PUBLIC_URL + "/default-profile.png"}
               alt="avatar"
             />
 

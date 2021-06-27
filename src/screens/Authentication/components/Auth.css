@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'gilroybold';
-    src: url(../assets/CSS-files/Gilroy-ExtraBold.otf);
-  }
-  @font-face {
-    font-family: 'gilroylight';
-    src: url(../assets/CSS-files/Gilroy-Light.otf);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .Auth-container {
     background: linear-gradient(0deg, #17153A, #17153A);
     width: 100vw;
@@ -31,7 +25,7 @@
     width: 450px;
     height: 68px;
     margin-top: 0vh;
-    font-family: gilroybold;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 28px;
@@ -80,10 +74,10 @@
         width: 100%;
         height: 68px;
         margin-top: 0vh;
-        font-family: Inter;
+        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 900;
-        font-size: 28px;
+        font-size: 5.5vw;
         line-height: 34px;
         text-align: center;
         color: #FFFFFF;

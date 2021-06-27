@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 #histitle {
   margin-left: 15vw;
   margin-top: 10vh;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .crypto-stat-title {
   margin-left: 10vw;
   margin-top: 10vh;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #statstable {

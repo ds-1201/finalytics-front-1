@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .cryptoList #histitle {
   margin-left: 15vw;
   margin-top: 10vh;
   color: white;
+}
+#histitle{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cryptoList #statstable {
@@ -20,4 +25,8 @@
 
 .cryptoList #Odd1 {
   background-color: #1b1940;
+}
+#statstable::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }

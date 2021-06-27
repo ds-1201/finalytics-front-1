@@ -1,11 +1,5 @@
-@font-face {
-  font-family: "gilroybold";
-  src: url(./assets/CSS-files/Gilroy-ExtraBold.otf);
-}
-@font-face {
-  font-family: "gilroylight";
-  src: url(./assets/CSS-files/Gilroy-Light.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -14,10 +8,10 @@
 }
 
 .signup-header {
-  width: 184px;
+  width: 200px;
   height: 10px;
   margin-top: 70px;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
@@ -32,23 +26,21 @@
 }
 
 .text-field-up {
-  width: 35vw;
+  width: 40vw;
   height: 50px;
   color: black;
   background: rgb(232, 240, 254);
-
   border-radius: 12px;
 }
 
 .tc-text {
   color: #ffffff;
-  width: 238px;
   height: 10px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
-.tc-text {
-  font-family: gilroybold;
-}
+
 .tc-text u {
   cursor: pointer;
 }
@@ -65,7 +57,7 @@
 
 .signup-button-text {
   margin: auto;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 19.95px;
@@ -80,8 +72,8 @@
 }
 
 .footer-text {
-  width: 350px !important;
-  font-family: gilroybold;
+  width: 400px ;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -94,7 +86,7 @@
 .footer-text-link {
   width: 77px;
   height: 24px;
-  font-family: gilroybold;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -114,5 +106,17 @@
   }
   .signup-container {
     height: fit-content;
+  }
+}
+@media (max-width: 400px) {
+  .footer-text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2vw;
+    line-height: 15px;
+    text-align: center;
+  
+    color: #ffffff;
   }
 }
