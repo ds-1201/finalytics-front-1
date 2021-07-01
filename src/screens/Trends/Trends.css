@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .trends-container {
   margin-top: 80px;
   margin-left: 50px;
@@ -7,6 +9,7 @@
 #trend {
   color: white;
   margin-left: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 .trends-graphs {
   width: 60vw;

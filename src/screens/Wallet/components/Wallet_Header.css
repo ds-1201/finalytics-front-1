@@ -1,4 +1,6 @@
 /* Dashboard Header Styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 .wallet-header-container {
     display: flex;
     width: fit-content;
@@ -21,6 +23,7 @@
     font-size: 1.9em;
     font-weight: bold;
     color: #FFFFFF;
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 
