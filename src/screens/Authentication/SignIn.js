@@ -62,7 +62,7 @@ function SignIn() {
     };
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/auth/login/",
+        "https://finalyticsapi.fintractglobal.com/auth/login/",
         `email=${credentials.email}&password=${credentials.password}`,
         {
           auth: {
@@ -87,7 +87,7 @@ function SignIn() {
     setErrorMessages({});
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/auth/refresh-token/",
+        "https://finalyticsapi.fintractglobal.com/auth/refresh-token/",
         `email=${credentials.email}`,
         {
           auth: {
@@ -113,7 +113,7 @@ function SignIn() {
     ) {
       axios
         .post(
-          "https://finalyticsad.fintract.co.uk/auth/reset-password/",
+          "https://finalyticsapi.fintractglobal.com/auth/reset-password/",
           `email=${credentials.email}`,
           {
             auth: {
@@ -143,7 +143,7 @@ function SignIn() {
   const handleOtpSubmit = (e) => {
     axios
       .post(
-        `https://finalyticsad.fintract.co.uk/auth/login/${userId}/`,
+        `https://finalyticsapi.fintractglobal.com/auth/login/${userId}/`,
         `otp=${otp}`,
         {
           auth: {

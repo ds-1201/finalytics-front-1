@@ -50,7 +50,7 @@ function Slideshow() {
     let unmount = false;
 
     axios
-      .get("https://finalyticsad.fintract.co.uk/stats/", {
+      .get("https://finalyticsapi.fintractglobal.com/stats/", {
         auth: {
           username: "testotp@fintract.co.uk",
           password: "IDhyYt96rse45ys0hg456jy0ti",

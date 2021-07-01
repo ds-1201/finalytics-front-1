@@ -1,0 +1,13 @@
+.sentimentsChart {
+  width: 45%;
+  background-color: #3592da;
+  margin-bottom: 100px;
+  border-radius: 30px;
+  height: 10%;
+  padding-left: 15px;
+}
+
+.sentimentsChart h3 {
+  color: #fff;
+  margin-left: 5%;
+}

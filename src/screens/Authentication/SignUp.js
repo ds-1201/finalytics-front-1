@@ -70,7 +70,7 @@ function SignUp() {
       };
       axios
         .post(
-          "https://finalyticsad.fintract.co.uk/auth/register/",
+          "https://finalyticsapi.fintractglobal.com/auth/register/",
           `email=${userDetails.email}&username=${userDetails.username}&password=${userDetails.password}&password2=${userDetails.cpassword}`,
           {
             auth: {

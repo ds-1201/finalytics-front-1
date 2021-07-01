@@ -32,7 +32,7 @@ function ChartContainer(props) {
     const source = axios.CancelToken.source();
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/info/",
+        "https://finalyticsapi.fintractglobal.com/info/",
         `companycode=${props.currentStock.Symbol}`,
         {
           auth: {
@@ -66,7 +66,7 @@ function ChartContainer(props) {
     const source = axios.CancelToken.source();
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/stocks-graph/",
+        "https://finalyticsapi.fintractglobal.com/stocks-graph/",
         `companycode=${props.currentStock.Symbol}&period=${range}&interval=${interval}`,
         {
           auth: {

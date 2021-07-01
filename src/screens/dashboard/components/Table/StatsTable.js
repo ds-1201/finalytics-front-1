@@ -46,7 +46,7 @@ const StatsTable = ({ currentStock }) => {
     let source = axios.CancelToken.source();
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/info/",
+        "https://finalyticsapi.fintractglobal.com/info/",
         `companycode=${currentStock.Symbol}`,
         {
           auth: {

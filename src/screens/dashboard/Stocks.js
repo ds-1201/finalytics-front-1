@@ -2,6 +2,8 @@ import React from "react";
 import Slideshow from "./components/News/Slideshow";
 import ChartContainer from "./components/Chart/ChartContainer";
 import SectorTrends from "./components/Trends/SectorTrends";
+import SentimentChart from "./sentiments/SentimentChart";
+import "./Stocks.css";
 
 const Stocks = ({ currentStock }) => {
   return (
@@ -12,8 +14,9 @@ const Stocks = ({ currentStock }) => {
       <div>
         <SectorTrends currentStock={currentStock} />
       </div>
-      <div>
+      <div className="stock-update">
         <Slideshow />
+        <SentimentChart currentStock={currentStock} />
       </div>
     </React.Fragment>
   );

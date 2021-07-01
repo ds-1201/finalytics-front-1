@@ -25,7 +25,7 @@ const Crypto = ({ currentCrypto }) => {
     console.log(currentCrypto.Symbol.toLowerCase());
     axios
       .post(
-        "https://finalyticsad.fintract.co.uk/crypto-graph/",
+        "https://finalyticsapi.fintractglobal.com/crypto-graph/",
         `crypto=${currentCrypto.Symbol.toLowerCase()}`,
         {
           auth: {
