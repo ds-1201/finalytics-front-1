@@ -52,6 +52,13 @@ function SignUp() {
   };
   let history = useHistory();
   useEffect(() => {
+    if (status === 201) {
+      setTimeout(() => {
+        history.push("/signin");
+      }, 4000);
+    }
+  }, [status]);
+  useEffect(() => {
     if (localStorage.id !== undefined) history.replace("/");
   }, []);
   const handleCheckbox = (e) => {

@@ -141,7 +141,7 @@ function HeaderMenu(props) {
                 */}
 
               <h3 className="profile-name">
-                <b>User</b>{" "}
+                <b>{localStorage.username}</b>{" "}
                 <span className="down-arrow">
                   <svg
                     width="9"
