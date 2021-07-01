@@ -5,7 +5,6 @@ import "./ChartContainer.css";
 import StockDetails from "./StockDetails";
 
 function ChartContainer(props) {
-  const [isLoading, setIsLoading] = useState(false);
   const [stocks, setStocks] = useState([]);
   const [duration, setDuration] = useState([]);
   const [currentValue, setCurrentValue] = useState("");
@@ -28,40 +27,38 @@ function ChartContainer(props) {
   };
 
   useEffect(() => {
-    let mount = true;
-    const source = axios.CancelToken.source();
-    axios
-      .post(
-        "https://finalyticsapi.fintractglobal.com/info/",
-        `companycode=${props.currentStock.Symbol}`,
-        {
-          auth: {
-            username: "testotp@fintract.co.uk",
-            password: "IDhyYt96rse45ys0hg456jy0ti",
-          },
-          cancelToken: source.token,
-        }
-      )
-      .then((response) => {
-        if (mount) {
+    const getData = () => {
+      axios
+        .post(
+          "https://finalyticsapi.fintractglobal.com/info/",
+          `companycode=${props.currentStock.Symbol}`,
+          {
+            auth: {
+              username: "testotp@fintract.co.uk",
+              password: "IDhyYt96rse45ys0hg456jy0ti",
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response);
           const data = response.data.info;
           setPrevClose(data.previousClose);
           setCurrentValue(data.regularMarketPrice);
-        }
-        return response;
-      })
-      .catch((error) => {
-        console.log(error.message);
-        return error;
-      });
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    };
+    getData();
+    const subscription = window.setInterval(() => {
+      getData();
+    }, 1000);
     return () => {
-      mount = false;
-      source.cancel("Component got unmounted");
+      clearTimeout(subscription);
     };
   }, [props.currentStock]);
 
   useEffect(() => {
-    setIsLoading(true);
     let mount = true;
     const source = axios.CancelToken.source();
     axios
@@ -82,7 +79,6 @@ function ChartContainer(props) {
             setDuration(res.data.TimeStamp[prop]);
           }
           setStocks(res.data.Close);
-          setIsLoading(false);
         }
         return res;
       })
@@ -108,7 +104,7 @@ function ChartContainer(props) {
     setInterval(Intervaloptions[e.target.id]);
   };
 
-  return !isLoading ? (
+  return (
     <React.Fragment>
       <div className="chart-container-data">
         <div className="chart-container-data-current">
@@ -160,8 +156,6 @@ function ChartContainer(props) {
         />
       </div>
     </React.Fragment>
-  ) : (
-    <h1 style={{ marginLeft: "30%", color: "white" }}>Loading...</h1>
   );
 }
 
