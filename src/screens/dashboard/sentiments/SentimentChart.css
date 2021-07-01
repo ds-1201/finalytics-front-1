@@ -1,10 +1,11 @@
 .sentimentsChart {
-  width: 45%;
+  width: 25vw;
   background-color: #3592da;
   margin-bottom: 100px;
   border-radius: 30px;
-  height: 10%;
+  height: 36vh;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 .sentimentsChart h3 {

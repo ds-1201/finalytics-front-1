@@ -51,7 +51,8 @@ opacity: 0.9;
     line-height: 7vh;
     color: #FFFFFF;
     mix-blend-mode: normal;
-    opacity: 0.9;   
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;   
 }
 .header-container_ac {
     display: flex;
@@ -69,7 +70,8 @@ opacity: 0.9;
     font-size: 2em;
     color: #FFFFFF;
     mix-blend-mode: normal;
-    opacity: 0.9;   
+    opacity: 0.9; 
+    font-family: 'Montserrat', sans-serif;  
 }
 .header-container_th {
     display: flex;
