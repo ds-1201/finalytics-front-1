@@ -120,3 +120,7 @@
     color: #ffffff;
   }
 }
+
+.MuiCheckbox-root {
+  color:white !important;
+}

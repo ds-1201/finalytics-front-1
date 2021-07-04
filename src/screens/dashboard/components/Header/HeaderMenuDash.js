@@ -137,11 +137,12 @@ function HeaderMenu(props) {
                     props.username?<span className="signup-text" onClick={signout}>Hi {props.username}</span> :
                     <Link to="/signup"> <span className="signup-text">Sign Up/Login</span>
                     </Link> 
-    
+                   localStorage.username.length()>8 ? localStorage.username.slice(0,8)+'..' :localStorage.username 
                 */}
 
               <h3 className="profile-name">
-                <b>{localStorage.username}</b>{" "}
+                <b>{(localStorage.username.length) > 8 ? localStorage.username.slice(0,8)+'..' :localStorage.username 
+                  }</b>{" "}
                 <span className="down-arrow">
                   <svg
                     width="9"
@@ -163,7 +164,7 @@ function HeaderMenu(props) {
           <div className="action">
             <div className="menu">
               <h3>
-                {localStorage.username}
+                {(localStorage.username.length) > 14 ? localStorage.username.slice(0,14)+'...' :localStorage.username }
                 <br></br>
                 <span>Balance: 24,539$</span>
               </h3>

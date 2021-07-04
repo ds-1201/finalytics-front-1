@@ -5,6 +5,10 @@
   height: 30vw;
 }
 
+/* .search-bar{
+  left: 300px;
+  position: relative;
+} */
 .profile-pic {
   width: 2.9vw;
   height: 2.9vh;
@@ -85,7 +89,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9.5vw;
+  width: 140px;
   height: 4.5vh;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -321,5 +325,13 @@
   }
   .usercontainer2 {
     width: fit-content;
+  }
+  .usercontainer3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+  }
+  .down-arrow{
+    display: none;
   }
 }
