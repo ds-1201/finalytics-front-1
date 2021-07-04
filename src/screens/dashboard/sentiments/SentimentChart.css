@@ -3,12 +3,23 @@
   background-color: #3592da;
   margin-bottom: 100px;
   border-radius: 30px;
-  height: 36vh;
+  height: fit-content;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 10px;
 }
 
 .sentimentsChart h3 {
   color: #fff;
   margin-left: 5%;
+}
+@media  (max-width:800px){
+  .sentimentsChart {
+    width: 66vw;
+    background-color: #3592da;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding-right: 20px;
+    
+  }
 }

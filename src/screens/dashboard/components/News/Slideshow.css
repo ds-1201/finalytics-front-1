@@ -328,19 +328,47 @@ a:active {
 }
 .myimage {
   width: 15vw;
-  height: 25vh;
   border-radius: 10%;
   background-color: none;
 }
 .news1 {
   margin-left: 2vw;
-  width: 35vw;
+  width: 40vw;
   overflow:hidden;
 }
 
 .news-img{
   margin-top: 2vh;
-  width: 12vw;
+  width: 15vw;
   height: 22vh;
   border-radius: 10px;
+}
+@media  (max-width:800px){
+  .slideshow {
+    margin: 5vh auto;
+    overflow: hidden;
+    width: 75vw;
+  }
+  .card {
+    height: 52vh;
+  }
+  .innerdata {
+    margin: 2vw;
+    display: flex;
+    flex-direction:column;
+    white-space: initial;
+    transition: ease 1000ms;
+  }
+  .news1 {
+    margin-left: 2vw;
+    width: 66vw;
+    overflow:hidden;
+  }
+  .news-img{
+    margin-top: 2vh;
+    margin-left: 5vw;
+    width: 60vw;
+    height: 18vh;
+  ;
+  }
 }

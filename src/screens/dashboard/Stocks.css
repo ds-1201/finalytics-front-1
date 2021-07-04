@@ -3,3 +3,8 @@
   align-items: center;
   margin-right: 5vw;
 }
+@media  (max-width:800px){
+  .stock-update {
+    flex-direction: column-reverse;
+  }
+}
