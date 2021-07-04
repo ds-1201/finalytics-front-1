@@ -77,7 +77,8 @@ function HeaderMenu(props) {
             className="notification-sign-container"
             onClick={notifToggle}
           >
-            <svg
+            <div className="notification-icon-container"> 
+            <svg className="notification-icon"
               width="10"
               height="12"
               viewBox="0 0 10 12"
@@ -93,8 +94,9 @@ function HeaderMenu(props) {
             </svg>
 
             <p className="notification-number">15</p>
-          </div>
-          <div className="Notification">
+            </div>
+           
+            <div className="Notification">
             <div className="profile2"></div>
             <div className="menu2">
               <ul>
@@ -121,6 +123,8 @@ function HeaderMenu(props) {
               </ul>
             </div>
           </div>
+          </div>
+          
 
           <div ref={menuActive} className="usercontainer3" onClick={menuToggle}>
             <div className="profile-name-container">
@@ -160,8 +164,7 @@ function HeaderMenu(props) {
                 </span>
               </h3>
             </div>
-          </div>
-          <div className="action">
+            <div className="action">
             <div className="menu">
               <h3>
                 {(localStorage.username.length) > 14 ? localStorage.username.slice(0,14)+'...' :localStorage.username }
@@ -192,6 +195,8 @@ function HeaderMenu(props) {
                 </li>
               </ul>
             </div>
+          </div>
+
           </div>
         </React.Fragment>
       )}

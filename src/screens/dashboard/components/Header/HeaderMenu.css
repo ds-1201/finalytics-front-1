@@ -26,6 +26,7 @@
 .profile-name-container {
   align-items: baseline;
   position: relative;
+  bottom: 8px;
 }
 
 .profile-name {
@@ -48,16 +49,14 @@
 
 /* .search-container {
   position: relative;
-  left: 160px;
+  left: 300px;
 } */
 
 .notification-sign-container {
-  position: relative;
-  left: 325px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 3.5vw;
+  width: 50px;
   height: 4.5vh;
   margin-left: 2vw;
   border-radius: 14vw;
@@ -84,10 +83,8 @@
 }
 
 .usercontainer3 {
-  position: relative;
-  left: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 140px;
   height: 4.5vh;
@@ -100,7 +97,18 @@
   z-index: 10000;
   cursor: pointer;
 }
-
+.notification-icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom: 5px;
+}
+.notification-icon{
+  position: relative;
+  top: 15px;
+  padding-right: 2px;
+}
 .notification-number {
   font-size: 0.8em;
   color: #ffffff;
@@ -120,8 +128,8 @@
 }
 .action {
   position: relative;
-  top: 30px;
-  right: 150px;
+  bottom: 25px; ;
+  right: 2vw;
   z-index: 1000;
 }
 .action .profile {
@@ -216,8 +224,8 @@
 }
 .Notification {
   position: relative;
-  top: 50px;
-  left: 110px;
+  right: 80px;
+  top: 8px;
   z-index: 1000;
 }
 .Notification .profile2 {
@@ -329,7 +337,10 @@
   .usercontainer3 {
     padding-left: 5px;
     padding-right: 5px;
-    width: fit-content;
+  }
+  .notification-sign-container {
+    display: flex;
+  
   }
   .down-arrow{
     display: none;
