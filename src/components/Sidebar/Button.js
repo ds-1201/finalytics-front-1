@@ -57,6 +57,13 @@ function Button(props) {
             icon={faUsersCog}
           />
         );
+        case "Manage Users":
+          return (
+            <FontAwesomeIcon
+              className={props.id === props.active ? "icons selected" : "icons"}
+              icon={faUsersCog}
+            />
+          );  
       default:
         console.log("Invalid Page!!!");
     }

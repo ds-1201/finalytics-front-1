@@ -13,6 +13,7 @@ function SideBar(props) {
     "Trade History",
     "How To Trade",
     "Account Settings",
+    "Manage Users"
   ];
   const history = useHistory();
 

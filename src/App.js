@@ -18,6 +18,7 @@ import Page3 from "./screens/TradeHistory/Page3";
 import Page4 from "./screens/TradeHistory/Page4";
 import Page5 from "./screens/TradeHistory/Page5";
 import Page6 from "./screens/TradeHistory/Page6";
+import ManageUsers from "./screens/ManageUsers/ManageUsers";
 function App() {
   return (
     <div className="App">
@@ -40,6 +41,7 @@ function App() {
             <Route path="/tradehistory" exact component={TradeHistory} />
             <Route path="/howtotrade" exact component={HowToTrade} />
             <Route path="/accountsettings" exact component={Account_Settings} />
+            <Route path="/manageusers" exact component={ManageUsers} />
             <Route path="/Page2" exact component={Page2} />
             <Route path="/Page3" exact component={Page3} />
             <Route path="/Page4" exact component={Page4} />

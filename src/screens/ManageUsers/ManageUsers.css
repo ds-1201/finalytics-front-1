@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+.manageContainer{
+    width: 78vw;
+}
+
+#manage-users{
+    color: white;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  font-family: 'Montserrat', sans-serif;
+}
+#usertable {
+    width: 70vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+}
+#usertable::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+.usertableButton{
+    color: rgb(9, 116, 165);
+    border-radius: 5px;
+    background: white;
+}
+
